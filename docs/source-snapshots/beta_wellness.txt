@@ -1,0 +1,99 @@
+# Text snapshot of https://quantum-age.com/beta/wellness
+# Captured 2026-10-06 by the prototype audit crawler (server-rendered HTML, tags reduced to [tag] markers)
+
+
+[nav] 
+[a href="/"] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[a href="/solutions"] Solutions
+[a href="/approach"] Approach
+[a href="/about"] About
+[a href="/references"] References
+[a href="/contact"] Contact
+[button ] 
+[section ] For Wellness Providers
+[h1] Lead the Longevity Movement. Scale with Purpose.
+[p] Wellness and preventative care providers are at the forefront of the longevity economy. We help you position as category leaders, build B2B partnerships with senior living operators, and scale revenue by 120%+ through strategic channel expansion.
+[a href="/contact"] Request Category Assessment
+[a href="/beta/roi-calculator"] Calculate Growth Impact
+[section ] 100%Category LeadershipOwn the longevity wellness space5xB2B PipelineSenior living partnerships+120%Revenue GrowthThrough B2B channel expansion4x+Strategic ValueExit multiples vs B2C only
+[h2] Wellness Segments We Serve
+[p] Specialized strategies for longevity-focused wellness providers
+[h3] Active Aging Fitness
+[p] Strength training, balance, mobility programs for 55+B2B OpportunityPartner programs with senior living communities
+[h3] Preventative Wellness
+[p] Nutrition, longevity coaching, metabolic healthB2B OpportunityCorporate wellness and community programming
+[h3] Social Wellness
+[p] Group classes, community engagement, purpose programsB2B OpportunityCommunity activation and resident engagement
+[h2] Wellness Growth Challenges
+[p] How we help wellness providers break through and scaleChallenge
+[p] Differentiation in crowded wellness landscapeSolution
+[p] Category-defining positioning as longevity-focused vs generic wellnessImpact
+[p] Clear market separation and premium pricingChallenge
+[p] Building enterprise relationships with senior living operatorsSolution
+[p] Operator-focused value propositions, partnership frameworks, and proof of concept programsImpact
+[p] 5x increase in B2B partnership pipelineChallenge
+[p] Scaling beyond B2C into high-value B2B channelsSolution
+[p] Dual-channel strategy maintaining consumer brand while building operator programsImpact
+[p] 120% revenue growth through B2B expansionChallenge
+[p] Positioning for strategic acquisitionSolution
+[p] Platform positioning, market penetration proof, and category leadership narrativeImpact
+[p] 4x+ revenue multiples at exit
+[h2] Longevity Wellness Growth Framework
+[p] From category definition through strategic acquisition1
+[h3] Category Positioning
+[p] Define and own the longevity wellness categoryKey DeliverablesLongevity-focused brand positioningCategory leadership messagingDifferentiation vs generic wellnessThought leadership platform2
+[h3] B2C Foundation
+[p] Build consumer brand credibility and proof pointsKey DeliverablesConsumer acquisition programsOutcome measurement & proof pointsCommunity building & advocacyContent marketing & education3
+[h3] B2B Expansion
+[p] Scale into senior living and corporate wellnessKey DeliverablesOperator partnership frameworksB2B value proposition & ROI modelsPilot program strategyChannel partner programs4
+[h3] Platform Positioning
+[p] Position as longevity platform for strategic exitKey DeliverablesMarket penetration storytellingCategory leadership proof pointsStrategic buyer identificationAcquisition narrative development
+[section ] Case Study
+[h2] Active Aging Fitness PlatformChallenge
+[p] Boutique fitness concept targeting 55+ needed to differentiate from generic wellness brands and build scalable revenue model beyond local studios.Approach
+[p] Repositioned as "The Longevity Movement" focused on healthspan extension, developed B2B partnership program with senior living operators, and built thought leadership platform.ResultsEstablished partnerships with 45 senior living communitiesB2B channel grew to 60% of total revenue within 18 monthsFeatured in NYT, WSJ, and Forbes as longevity category leaderSuccessfully acquired by healthcare wellness platform at 4.2x revenue
+[h2] Ready to Lead the Longevity Category?
+[p] Let's build the positioning and B2B strategy that transforms your wellness brand into a scalable platform.
+[a href="/contact"] Schedule Strategy Session
+[footer] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[p] The only marketing firm in senior care steeped in both consumer and business-to-business.
+[h3] Quick Links
+[li] 
+[a href="/about"] About
+[li] 
+[a href="/solutions"] Services
+[li] 
+[a href="/team"] Team
+[li] 
+[a href="/insights"] Insights
+[li] 
+[a href="/contact"] Contact
+[h3] Our Services
+[li] 
+[a href="/solutions#strategize"] Strategize & Launch
+[li] 
+[a href="/solutions#awareness"] Build Awareness
+[li] 
+[a href="/solutions#thought-leadership"] Thought Leadership
+[li] 
+[a href="/solutions#perform"] Perform
+[li] 
+[a href="/solutions#network"] Network
+[li] 
+[a href="/solutions#generate"] Generate Business
+[h3] Get in Touch
+[li] 
+[a href="tel:4406386990"] 440.638.6990
+[li] 
+[a href="mailto:info@quantum-age.com"] info@quantum-age.com
+[li] Serving clients internationally
+[a href="#"] 
+[a href="#"] 
+[a href="#"] 
+[p] © 2026 Quantum Age Collaborative. All rights reserved.
+[a href="/privacy"] Privacy Policy
+[a href="/terms"] Terms of Service
+[a href="/beta"] QABeta
+[section ] 

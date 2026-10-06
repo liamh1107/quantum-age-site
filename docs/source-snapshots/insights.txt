@@ -1,0 +1,378 @@
+# Text snapshot of https://quantum-age.com/insights
+# Captured 2026-10-06 by the prototype audit crawler (server-rendered HTML, tags reduced to [tag] markers)
+
+
+[nav] 
+[a href="/"] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[a href="/solutions"] Solutions
+[a href="/approach"] Approach
+[a href="/about"] About
+[a href="/references"] References
+[a href="/contact"] Contact
+[button ] 
+[section ] Market Intelligence Hub
+[h1] Insights That Drive Growth
+[p] Market intelligence, strategic playbooks, and proven tactics for the longevity economy. Data-driven insights from experts who live and breathe senior care.
+[input type="text" placeholder="Search insights, topics, or tags..."] 
+[button ] All Insights(115)
+[button ] Marketing(24)
+[button ] Strategy(7)
+[button ] Technology(13)
+[button ] Industry(56)
+[button ] Innovation(15)
+[button ] All Types
+[button ] Articles
+[button ] Reports
+[button ] Case StudiesShowing 115 insights
+[h2] Featured
+[a href="/insights/ai-marketing-in-2026-what-niche-b2b-leaders-need-to-understand-now"] Article
+[h3] AI Marketing in 2026: What Niche B2B Leaders Need to Understand Now
+[p] What AI marketing in 2026 really means for B2B senior care. Learn how strategy, clarity, and trust matter more as AI reshapes expectations.AIMarketingB2BQuantum Age Team15 minRead
+[a href="/insights/from-more-to-smarter-why-efficient-growth-is-the-new-mandate-for-b2b-marketing-in-2026"] Article
+[h3] From “More” to “Smarter”: Why Efficient Growth Is the New Mandate for B2B Marketing in 2026
+[p] B2B marketing in 2026 is shifting from growth at all costs to efficient growth. Learn how senior care and niche B2B organizations can drive impact, trust, and sustainable results.MarketingB2BIndustry TrendsQuantum Age Team11 minRead
+[a href="/insights/from-content-to-conversion-designing-marketing-that-moves-people"] Article
+[h3] From Content to Conversion: Designing Marketing That Moves People
+[p] Great content alone doesn’t drive results. Learn how clarity, structure, and continuity turn content into connected experiences that convert.MarketingContentDesignQuantum Age Team11 minRead
+[h2] More Insights
+[a href="/insights/reputation-is-a-strategy-building-trust-before-you-need-it"] Article
+[h3] Reputation Is a Strategy: Building Trust Before You Need It
+[p] Why reputation is an enterprise strategy in senior care—and how leaders can build trust through experience, communication and digital presence.ReputationSenior CareQuantum Age Team5 minRead
+[a href="/insights/what-the-latest-ai-marketing-trends-mean-for-senior-care-b2b-marketers"] Article
+[h3] What the Latest AI Marketing Trends Mean for Senior Care B2B Marketers
+[p] Discover 5 practical ways senior care solution providers and other niche B2B marketers are using AI to sharpen strategy, boost SEO, personalize outreach, and strengthen trust with decision-makers.AISenior CareQuantum Age Team15 minRead
+[a href="/insights/reputation-at-risk-why-skilled-nursing-needs-a-new-playbook-for-online-perception"] Article
+[h3] Reputation at Risk: Why Skilled Nursing Needs a New Playbook for Online Perception
+[p] Skilled nursing providers are being judged online every day. Learn why managing your reputation is critical for trust, referrals, and visibility.”ReputationSNFQuantum Age Team12 minRead
+[a href="/insights/how-gpt4-can-be-used-for-senior-care-and-niche-content-marketing"] Article
+[h3] How GPT4 can be used for Senior Care and Niche Content Marketing
+[p] Most marketers are using GPT-4 wrong””especially in complex fields like senior care. Here's how to make AI work with your voice, not against it.AISenior CareQuantum Age Team6 minRead
+[a href="/insights/why-reputation-management-is-now-mission-critical-for-senior-living-operators"] Article
+[h3] Why Reputation Management Is Now Mission-Critical for Senior Living Operators
+[p] "Nearly 1,900 senior living communities earned ‘Best’ rankings from U.S. News. What do they know that you should? Reputation is now a core strategy””driving visibility, satisfaction, and occupancy."Senior CareReputationQuantum Age Team9 minRead
+[a href="/insights/the-power-of-niche-marketing-why-going-narrow-can-help-you-go-big"] Article
+[h3] The Power of Niche Marketing: Why Going Narrow Can Help You Go Big
+[p] Niche marketing drives smarter growth. Learn why going narrow helps B2B brands stand out.MarketingQuantum Age Team6 minRead
+[a href="/insights/10-low-lift-marketing-moves-that-deliver-big-in-senior-care"] Article
+[h3] 10 Low-Lift Marketing Moves That Deliver Big in Senior Care
+[p] Discover 10 low-cost, high-impact marketing tactics built for senior care pros. Smart, scrappy strategies to help you do more with less.Senior CareMarketingQuantum Age Team9 minRead
+[a href="/insights/cut-through-the-noise"] Article
+[h3] Cut Through the Noise: Why Clarity Is Your Competitive Edge in Senior Living B2B Marketing
+[p] Learn why clear positioning, storytelling, and strategy give B2B senior living brands a competitive edge in a crowded, complex market.Senior CareMarketingQuantum Age Team6 minRead
+[a href="/insights/2025-aging-services-trends"] Article
+[h3] 2025 Aging Services Trends: What’s Next for the Industry?
+[p] Here are a few key trends shaping the future of aging services to keep in mind when navigating the road ahead.Senior CareIndustry TrendsQuantum Age Team7 minRead
+[a href="/insights/shifting-to-a-quality-mindset-why-abm-is-a-game-changer"] Article
+[h3] Shifting to a Quality Mindset: Why ABM is a Game-Changer
+[p] Account-based marketing isn’t new. But it’s still the strategy driving 234% faster pipelines and 58% larger deals. Here’s why it still works.ABMQuantum Age Team11 minRead
+[a href="/insights/googles-ai-search-what-it-means-for-your-business-and-what-to-do-about-it"] Article
+[h3] Google’s AI Search: What it means for your business (and what to do about it)
+[p] Google’s AI-powered SGE is transforming search behavior & impacting businesses. Learn actionable strategies to adapt, enhance online visibility and thrive.AIQuantum Age Team11 minRead
+[a href="/insights/leadership-in-times-of-crisis"] Article
+[h3] Leadership in times of crisis
+[p] CC Andrews, of Quantum Age, led a panel discussion on “Leadership in Times of Crisis” at the Long-Term Care & Senior Living CXO Summit, June 3-4, in San Diego.LeadershipQuantum Age Team3 minRead
+[a href="/insights/cc-appointed-to-entrepreneurs-accelerated-group"] Article
+[h3] CC appointed to Entrepreneur’s Accelerated Group
+[p] CC Andrews, of Quantum Age, was appointed to the board of directors for Cleveland’s Entrepreneurs’ Organization’s Accelerator (EOA) program.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/qa-discusses-relationship-building-post-covid-19"] Article
+[h3] QA discusses relationship building post-COVID-19
+[p] CC Andrews, of Quantum Age, was featured in Provider Magazine’s June cover story, “Building Relationships to Rejuvenate the Market.”COVID-19Quantum Age Team3 minRead
+[a href="/insights/forum-speaks-out-on-the-potential-for-therapeutics-in-managing-covid-19"] Article
+[h3] Forum speaks out on the potential for therapeutics in managing COVID-19
+[p] Early evidence suggests that mAbs treatment can reduce the viral load which may lead to milder symptoms and help speed recovery.COVID-19Quantum Age Team3 minRead
+[a href="/insights/caradays-positive-culture-showcased-in-provider"] Article
+[h3] Caraday’s positive culture showcased in Provider
+[p] For long-term and senior care providers, the challenges of managing COVID-19 reinforced the importance of an engaged and positive culture.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/saiva-healthcare-featured-in-mcknights"] Article
+[h3] SAIVA Healthcare featured in McKnight’s
+[p] When a customer shares their unsolicited experiences, you know you’re doing things right.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/exploring-innovative-models-of-care"] Article
+[h3] Exploring Innovative Models of Care
+[p] A panel of experts presented opportunities to diversify offerings by creating new models of care at the Long-Term Care & Senior Living CXO Summit, in Miami, Florida.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/the-memory-care-design-challenge-presented-at-efa"] Article
+[h3] The Memory Care Design Challenge Presented at EFA
+[p] The 2020 Environments for Aging Virtual Conference addressed this topic with the webinar, The Memory Care Design Challenge: Design Criteria That Score Winning Outcomes for Individuals, Groups, and Staff.DesignQuantum Age Team3 minRead
+[a href="/insights/changing-direction-and-moving-forward-making-virtual-events-part-of-your-new-strategy"] Article
+[h3] Changing Direction and Moving Forward: Making Virtual Events Part of Your New Strategy
+[p] Dedicated marketers are moving forward along a different path, namely that of virtual events.StrategyEventsQuantum Age Team5 minRead
+[a href="/insights/what-to-do-with-that-now-obsolete-event-plan-you-do-have-options"] Article
+[h3] What to Do with That (Now Obsolete) Event Plan: You DO Have Options
+[p] Refocus your existing events budget on new business development and outreach strategies, including options like sponsoring online events and creating your own virtual events.EventsQuantum Age Team3 minRead
+[a href="/insights/free-resident-engagement-resources-under-covid-19-restrictions"] Article
+[h3] Free Resident Engagement Resources Under COVID-19 Restrictions
+[p] Among the most common challenges we’re seeing from communities is how to maintain resident engagement during this time of COVID-19 proximity restrictions. We’ve surfed the web and borrowed from others’ lists to bring you this quick group of resourcesCOVID-19Quantum Age Team14 minRead
+[a href="/insights/your-post-covid-19-marketing-plan-cant-wait"] Article
+[h3] Your Post-COVID-19 Marketing Plan Can’t Wait
+[p] While the focus right now is dealing with COVID-19’s immediate impact on business, don’t lose sight of the pandemic’s long-term implications.MarketingCOVID-19Quantum Age Team3 minRead
+[a href="/insights/marketing-during-a-national-crisis-doesnt-need-to-stop-but-it-needs-to-adjust"] Article
+[h3] Marketing During a National Crisis Doesn’t Need to Stop, But It Needs to Adjust
+[p] Yes, you still can and should market during a crisis, but it’s important to do it ways that inspires and comforts customers/clients and supports your brand in a positive way.MarketingQuantum Age Team4 minRead
+[a href="/insights/covid-19-survival-guide-key-takeaways-for-your-organization"] Article
+[h3] COVID-19 Survival Guide: Key Takeaways for Your Organization
+[p] The situation regarding COVID-19 seems to evolve daily. However, there are some key issues organizational leaders need to understand to effectively and responsibly strategize respond to the virus moving forward.COVID-19Quantum Age Team6 minRead
+[a href="/insights/2020-predictions-in-senior-living-disruption-new-tech-workforce-challenges-and-pdpm"] Article
+[h3] 2020 Predictions in Senior Living: Disruption, New Tech, Workforce Challenges, and PDPM.
+[p] It usually begins at about the second week of December: articles and blog posts proclaim and predict the future of the following year.Senior CareTechnologyQuantum Age Team8 minRead
+[a href="/insights/keep-it-small"] Article
+[h3] Keep It Small
+[p] Vendors love the Environments for Aging conference, but encourage organizers to keep it small.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/quantum-age-leads-panel-on-technology-in-senior-living"] Article
+[h3] Quantum Age Leads Panel on Technology in Senior Living
+[p] Experts shared insights on making technology decisions in senior living that differentiate in market and advance culture at Environments for Aging.Senior CareTechnologyQuantum Age Team3 minRead
+[a href="/insights/heading-to-san-antonio-for-argentum-some-travel-highlights-from-a-local"] Article
+[h3] Heading to San Antonio for Argentum? Some Travel Highlights from a “Local”
+[p] Very soon, participants of Argentum’s Senior Living Executive Conference will be collecting in San Antonio, Texas. This town is packed with things to do ”“ restaurants for every taste (and budget); shopping; adventure; and plenty of spots to simply relax and unwind. And take it from me, a resident of San Antonio, the choices can be overwhelming.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/the-4-keys-to-maximizing-your-sponsorship-expenditures-1"] Article
+[h3] The 4 Keys to Maximizing Your Sponsorship Expenditures
+[p] Companies invest a lot of money in sponsoring membership associations. And for good reason: These associations can be ideal markets for companies, and companies that align with associations as sponsors can increase the likelihood of achieving their business goals with the association’s members. The power of affinity is significant.SponsorshipQuantum Age Team3 minRead
+[a href="/insights/will-i-see-you-at-leadingage"] Article
+[h3] Will I See You at LeadingAge?
+[p] While there are lots of different state-level meetings of this association of senior living organizations, the question invariably refers to the Big Kahuna of conventions, the national LeadingAge conference (in Philadelphia in 2018, in San Diego in 2019).Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/best-practices-of-social-medias-top-3-facebook-twitter-linkedin"] Article
+[h3] Best Practices of Social Media’s Top 3: Facebook, Twitter, LinkedIn
+[p] Ever since social media platforms took over our lives, they have moved forward with a continuous evolution. In the beginning, long-term and post-acute care (LTPAC) providers just posted marketing content and crossed their fingers. Today each platform offers a range of strategic marketing tools to help businesses promote their products, services, and brands, while also helping to attract prospects and customers.Social MediaQuantum Age Team6 minRead
+[a href="/insights/seo-old-school-tactic-or-leading-edge-strategy"] Article
+[h3] SEO: Old-School Tactic or Leading-Edge Strategy?
+[p] Gone are the days of generating tons of low-quality, “content-farm” copy ”” a common practice in the past. Today, content has to be excellent, add value, and engage visitors.StrategyQuantum Age Team6 minRead
+[a href="/insights/content-confusion-consider-these-options-for-modern-content-marketers"] Article
+[h3] Content Confusion? Consider These Options for Modern Content Marketers
+[p] Options for promoting organizations used to be simple: print ads, brochures, and press releases were the mainstays. Today the content marketing landscape is much more diverse and has expanded far beyond merely old-school methods. Now, to conduct content marketing campaigns that work, marketers need to create a wide range of content. What’s more, they need to use their content tools in the right order to move prospects through the buyers’ journey (the marketing funnel) ”” including attracting, nurturing, and converting.ContentQuantum Age Team7 minRead
+[a href="/insights/why-and-how-you-should-align-your-company-with-associations"] Article
+[h3] Why and How You Should Align Your Company with Associations
+[p] An effective way for a company to market to its target industry or profession is to become a corporate sponsor or partner of trade or professional associations.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/recruiting-for-the-future-find-your-why-first"] Article
+[h3] Recruiting for the future? Find your ‘why’ first
+[p] How are you going to attract future generations to join your workforce? Experts recommend these best practices:  •	Be purpose- or mission- driven  •	Listen to your staff •	Empower workers with some level of autonomy •	Be a diverse and inclusive organization.Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/adopting-new-media-without-abandoning-traditional-media-relations"] Article
+[h3] Adopting New Media Without Abandoning Traditional Media Relations
+[p] Understand why companies should adapt to the many types of new media; focus on messaging and content; and create a media relations strategySenior CareB2BQuantum Age Team4 minRead
+[a href="/insights/the-hidden-cost-of-diy-events"] Article
+[h3] The Hidden Cost of DIY Events
+[p] Corporate event planning is expensive but the DIY route costs you even more. Consider these five hidden costs to DIY event planning that could have you turning to a professional.EventsQuantum Age Team5 minRead
+[a href="/insights/how-to-keep-content-efforts-from-slipping-through-the-cracks"] Article
+[h3] How to Keep Content Efforts from Slipping Through the Cracks
+[p] Is your marketing strategy leveraging your branded content to the max? Learn how to get the most out of your content marketing investments and boost your branding all year long.ContentQuantum Age Team5 minRead
+[a href="/insights/how-to-be-a-better-corporate-partner-to-associations"] Article
+[h3] How to be a Better Corporate Partner to Associations
+[p] Corporate partnerships with associations can help post-acute organizations be leaders, especially when both sides maximize the relationship. See how you can improve your partnerships in a mutually beneficial way.Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/taking-innovation-from-mysterious-to-magnificent"] Article
+[h3] Taking Innovation from Mysterious to Magnificent
+[p] Innovation. Does the very idea excite and terrify you at the same time? After all, innovation can lead to tremendous growth and success. It can take you in exciting new directions or help you make forward progress on your current path. At the same time, however, coming up with innovative ideas can be intimidating. Brainstorming often is accompanied by stress, anxiety, and blank stares. But here’s the good news: you already have a diamond mine of opportunities and ideas; you just need to learn to mine them.TechnologyInnovationQuantum Age Team8 minRead
+[a href="/insights/the-4-keys-to-maximizing-your-sponsorship-expenditures"] Article
+[h3] The 4 Keys to Maximizing Your Sponsorship Expenditures
+[p] Companies invest a lot of money in sponsoring membership associations. And for good reason: These associations can be ideal markets for companies, and companies that align with associations as sponsors can increase the likelihood of achieving their business goals with the association’s members. The power of affinity is significant.SponsorshipQuantum Age Team4 minRead
+[a href="/insights/the-dollars-and-sense-of-the-business-of-aging"] Article
+[h3] The Dollars and Sense of the Business of Aging
+[p] More companies are starting to realize that being age friendly isn’t just good business, it’s also good for business.Senior CareB2BQuantum Age Team7 minRead
+[a href="/insights/-recognizing-the-loneliness-crisis-among-older-adults-is-a-vital-first-step-"] Article
+[h3] Recognizing the Loneliness Crisis Among Older Adults Is a Vital First Step
+[p] Report offers recommendations for tackling loneliness in the longevity economy.Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/snf-survival-depends-on-understanding-the-new-hospital-landscape-among-other-factors"] Article
+[h3] SNF Survival Depends on Understanding the New Hospital Landscape, Among Other Factors
+[p] SNF cost report demonstrates need to understand hospital landscape, among other factors.SNFQuantum Age Team5 minRead
+[a href="/insights/intergenerational-programming-popular-but-not-substantive-for-senior-housing-providers"] Article
+[h3] Intergenerational Programming Popular But Not Substantive in Senior Housing Communities
+[p] A study of intergenerational programming in senior housing finds that it's popular but most lack substance.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/your-cheat-sheet-for-2018-senior-housing-trends-predictions"] Article
+[h3] Your Cheat Sheet for 2018 Senior Living Trends & Predictions
+[p] An overview of predictions about the senior housing industry for 2018.Senior CareIndustry TrendsQuantum Age Team10 minRead
+[a href="/insights/up-and-coming-housing-options-for-older-adults-are-making-their-mark-in-the-longevity-economy"] Article
+[h3] Up and Coming Housing Options for Older Adults are Making their Mark in the Longevity Economy
+[p] Cohousing and intergenerational housing are making their mark in the longevity economy.Longevity EconomyQuantum Age Team7 minRead
+[a href="/insights/5-ways-to-obtain-brand-differentiation-with-membership-and-trade-associations"] Article
+[h3] 5 Ways to Obtain Brand Differentiation with Membership and Trade Associations
+[p] 5 Ways to Obtain Brand Differentiation with Membership and Trade AssociationsBrandQuantum Age Team5 minRead
+[a href="/insights/6-ways-to-achieve-your-business-development-goals-with-membership-and-trade-associations"] Article
+[h3] 6 Ways to Achieve your Business Development Goals with Membership and Trade Associations
+[p] 6 Ways to Achieve your Business Development Goals with Membership and Trade AssociationsSenior CareB2BQuantum Age Team5 minRead
+[a href="/insights/why-and-how-to-position-your-company-as-a-knowledge-leader-through-associations"] Article
+[h3] Why and How to Position Your Company as a Knowledge Leader through Associations
+[p] Why and How to Position Your Company as a Knowledge Leader through AssociationsSenior CareB2BQuantum Age Team6 minRead
+[a href="/insights/ziegler-senior-living-150-list-offers-noteworthy-takeaways-and-some-details"] Article
+[h3] Ziegler Senior Living 150 List Offers Noteworthy Takeaways and Details
+[p] This 2017 ranking of not for profit long term and post acute care providers.Senior CareQuantum Age Team3 minRead
+[a href="/insights/telomeres-mitochondria-and-healthy-longevity"] Article
+[h3] Telomeres, Mitochondria, and Healthy Longevity
+[p] Scientists are getting closer to extending lifespan based on mouse models and telomere research.Longevity EconomyQuantum Age Team3 minRead
+[a href="/insights/the-disease-of-aging-airbnb-and-products-for-longevity"] Article
+[h3] The Disease of Aging, Airbnb, and Products for Longevity
+[p] Panelists make predictions about longevity economy.Longevity EconomyQuantum Age Team5 minRead
+[a href="/insights/survey-points-to-best-practices-for-successful-innovation"] Article
+[h3] Survey Points to Best Practices for Successful Innovation
+[p] Best practices for senior care and aging services innovation.TechnologyInnovationQuantum Age Team6 minRead
+[a href="/insights/urbanites-want-to-stay-in-the-city"] Article
+[h3] Survey Finds Urbanites Confident About Staying in Cities as they Age
+[p] City dwellers say they want to stay where they are as they grow older.Senior CareB2BQuantum Age Team6 minRead
+[a href="/insights/a-global-perspective-on-aging-the-longevity-dividend"] Article
+[h3] A Global Perspective on Aging & the Longevity Dividend
+[p] The Economist takes a global perspective on aging and the longevity economy.Longevity EconomyQuantum Age Team5 minRead
+[a href="/insights/4-simplified-steps-to-account-based-marketing-abm"] Article
+[h3] 4 Simplified Steps to Account-Based Marketing (ABM)
+[p] How to implement an account-based marketing strategy for B2B marketing. This post covers 4 easy steps to ABM.MarketingABMQuantum Age Team4 minRead
+[a href="/insights/retirement-income-healthcare-costs-and-homeownership-food-for-thought-on-the-future-of-the-longevity-economy"] Article
+[h3] Retirement Income, Healthcare Costs, and Homeownership””Food for Thought on the Future of the Longevity Economy
+[p] An examination of the impact of healthcare costs, society security on retirement security.Longevity EconomyQuantum Age Team4 minRead
+[a href="/insights/will-senior-housing-be-affordable-and-meet-the-design-needs-of-older-adults"] Article
+[h3] Will Senior Housing Be Affordable and Meet the Design Needs of Older Adults?
+[p] Builders and remodelers are confident about the future of 55+ housing but will they keep it affordable, accessible, and well-designed?DesignQuantum Age Team4 minRead
+[a href="/insights/what-you-need-to-know-about-corporate-partnerships-with-trade-associations"] Article
+[h3] What You Need To Know About Corporate Partnerships With Trade Associations
+[p] A deconstruction of corporate partnerships with trade associations, a win-win for both.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/four-impactful-b2b-marketing-strategies-you-may-be-missing-out-on"] Article
+[h3] Four Impactful B2B Marketing Strategies You May Be Missing Out On
+[p] Four Impactful B2B Marketing Strategies You May Be Missing Out OnMarketingB2BQuantum Age Team4 minRead
+[a href="/insights/the-need-for-snf-care-way-more-likely-for-you-and-me-and-everyone-else-but-an-opportunity-for-providers"] Article
+[h3] The Need for SNF Care Way More Likely for You and Me (and Everyone Else) But an Opportunity for Providers
+[p] More Americans are likely to need skilled nursing facility care than previously estimated.SNFQuantum Age Team4 minRead
+[a href="/insights/its-time-for-long-term-care-providers-to-take-the-lead-on-reframing-aging"] Article
+[h3] It’s Time for Long Term Care Providers to Take the Lead on Reframing Aging
+[p] Report offers practical and evidence-based advice for effective ways to reframe aging.Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/lets-take-a-deep-dive-into-the-policy-response-to-global-aging"] Article
+[h3] A Deep Dive Into the Policy Response to Global Aging
+[p] A new report examines how 12 countries have responded to global aging.Senior CareB2BQuantum Age Team6 minRead
+[a href="/insights/aging-services-marketers-meet-the-perennials"] Article
+[h3] Aging Services Marketers: Meet the “Perennials”
+[p] Baby boomers and Gen Xers have more disposable income, yet Millennials are the focus of marketing campaigns, especially when it comes to women.Senior CareQuantum Age Team5 minRead
+[a href="/insights/why-intergenerational-programs-are-future-of-aging-services"] Article
+[h3] Here's Why Intergenerational Programs are The Future of Aging Services
+[p] Intergenerational programs are beneficial for all involved and providers need to consider incorporating these initiatives into their services.Senior CareQuantum Age Team5 minRead
+[a href="/insights/a-new-report-packed-with-useful-data-ranks-states-based-on-delivery-of-long-term-services-and-supports"] Article
+[h3] A New Report””Packed with Useful Data””Ranks States Based on Delivery of Long-Term Services and Supports
+[p] Report illustrates how states meet measures of long-term services and supports.Senior CareB2BQuantum Age Team6 minRead
+[a href="/insights/global-innovation-in-aging-services-is-now-a-thing"] Article
+[h3] Global Innovation in Aging Services is (Finally) a Thing
+[p] Aging 2.0 new report validates that innovation in aging services does exist on a global scale.Senior CareTechnologyQuantum Age Team6 minRead
+[a href="/insights/life-expectancy-disparities-point-to-opportunities-for-aging-services-innovation"] Article
+[h3] Life Expectancy Disparities Point to Opportunities for Aging Services Innovation
+[p] There are disparities in life expectancy in the U.S. but it presents opportunities in the longevity economy and aging services.Senior CareTechnologyQuantum Age Team3 minRead
+[a href="/insights/quantum-age-president-elected-to-advancing-excellence-board"] Article
+[h3] Quantum Age President Elected to Advancing Excellence Board
+[p] Quantum Age president elected to  Advancing Excellence Board.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/requirements-of-participation-final-rule-creates-opportunities"] Article
+[h3] Wide-Reaching CMS Rule Opens the Door for Innovation
+[p] The CMS final rule on conditions of participation for long term care facilities creates a opportunities for LTPAC vendors.TechnologyInnovationQuantum Age Team5 minRead
+[a href="/insights/new-ideas-for-innovation-in-technology-for-seniors"] Article
+[h3] A Fresh Take on Senior Care Technology and Innovation
+[p] A report examines how technology will empower seniors to live longer, healthier, and more independent lives by preventing fraud and abuse, providing greater social connectivity, and improving access to vital information and services.Senior CareTechnologyQuantum Age Team5 minRead
+[a href="/insights/a-crystal-ball-look-at-post-acute-care-senior-housing"] Article
+[h3] A Crystal Ball Look at Post-Acute Care & Senior Housing
+[p] A recent report contains some valuable insights about the entire continuum of senior care, serves as a reminder that post-acute care stands on the precipice of major change.Senior CareB2BQuantum Age Team6 minRead
+[a href="/insights/new-payment-models-foster-innovation"] Article
+[h3] New Payment Models Foster Care Innovations
+[p] An Ohio provider has created an innovative home and hospice care model that reduces hospitalizations through care coordinationTechnologyInnovationQuantum Age Team5 minRead
+[a href="/insights/competition-reinvestment-the-future-of-ccrcs-senior-living"] Article
+[h3] Competition & Reinvestment: the Future of CCRCs & Senior Living
+[p] Not for profit CCRCs have a golden opportunity to embrace opportunities in the longevity economy.Senior CareQuantum Age Team5 minRead
+[a href="/insights/the-longevity-economy-observations-opportunities"] Article
+[h3] The Longevity Economy: Observations & Opportunities
+[p] The longevity economy will be around for awhile--the Millennials will age and they will extend it with the products and services they purchase.Longevity EconomyQuantum Age Team4 minRead
+[a href="/insights/20-tips-for-kickstarting-your-content-marketing-part-2"] Article
+[h3] 20 Tips for Kickstarting Your Content Marketing (Part 2)
+[p] By making content, promoting that content and measuring the results, you will master the content marketing game and get found when prospects are looking for answers.MarketingContentQuantum Age Team5 minRead
+[a href="/insights/nine-tips-for-creating-irresistible-content"] Article
+[h3] 20 Tips for Kickstarting Your Content Marketing (Part 1)
+[p] The two things that matter most when it comes to improving your website’s rankings: Relevance and authorityMarketingContentQuantum Age Team5 minRead
+[a href="/insights/combining-aging-and-innovation-is-great-but-elder-input-is-key"] Article
+[h3] Combining Aging and Innovation is Great but Elder Input is Key
+[p] The 2016 Aging 2.0 conference met some high expectations, but entrepreneurs must pay more attention to including elders in their designs.TechnologyInnovationQuantum Age Team7 minRead
+[a href="/insights/an-unprepared-housing-market-and-the-longevity-economy"] Article
+[h3] An Unprepared Housing Market and the Longevity Economy
+[p] A recent Harvard study highlights the deficiencies in the future of housing for the aging population and the longevity economy.Longevity EconomyQuantum Age Team4 minRead
+[a href="/insights/innovation-and-design-meet-to-create-person-centered-furnishings"] Article
+[h3] Furnishings Combine Innovation and Person-Centered Design
+[p] Quantum Age is always on the look out for innovative technologies, and this time we found some furniture designed for individuals with dementia.TechnologyInnovationQuantum Age Team5 minRead
+[a href="/insights/aging-population-shrinking-economy"] Article
+[h3] Aging Population, Shrinking Economy?
+[p] The aging of baby boomers, in addition to greater longevity, may have a deleterious effect on the global economy.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/webinar-unveils-innovations-in-senior-care"] Article
+[h3] Webinar Unveils Innovations in Senior Care
+[p] SAGE and CC Andrews present innovations in senior care design.Senior CareTechnologyQuantum Age Team3 minRead
+[a href="/insights/qa-president-leads-two-sessions-at-smash-and-shine"] Article
+[h3] QA President Leads Two Sessions at SMASH and SHINE
+[p] The SMASH and SHINE conferences will feature workshops moderated by Quantum Age aimed at marketing, human resources, and internal communication.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/technology-staff-training-taking-it-to-the-next-level"] Article
+[h3] Technology & Staff Training: Taking It to the Next Level
+[p] Leveraging technology for LTPAC staff training can take your organization to the next level in education and patient quality care.TechnologyQuantum Age Team6 minRead
+[a href="/insights/medicaid-may-strike-a-sour-note-for-unprepared-providers"] Article
+[h3] Medicaid May Strike a Sour Note for Unprepared Providers
+[p] Medicaid has become a safety net for many seniors who need long-term care services and support (LTSS), but it appears to be stretched too thin.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/five-star-calculations-demystified"] Article
+[h3] Five-Star Calculations Demystified
+[p] A breakdown of the new five-star quality rating system measures and their impact on the overall ratings.Senior CareB2BQuantum Age Team8 minRead
+[a href="/insights/becky-cook-joins-quantum-age-collaborative-team"] Article
+[h3] Becky Cook Joins Quantum Age Collaborative Team
+[p] Becky Cook joins Quantum Age Collaborative to help clients navigate the longevity economy.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/grim-outlook-for-medicare-funding-means-snfs-should-prepare-now"] Article
+[h3] Grim Outlook for Medicare Funding Means SNFs Should Prepare Now
+[p] The Medicare pie is shrinking and post-acute care providers need to prepare for it by embracing value-based purchasing models, bundled payments, and the longevity economy.SNFQuantum Age Team6 minRead
+[a href="/insights/ability-user-conference"] Article
+[h3] QA Team to Manage eHDS/Ability User Conference
+[p] QA will manage eHDS/Ability CONNECT 2016 user conference.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/qa-president-moderates-at-ltc-100"] Article
+[h3] QA President Moderates at LTC 100
+[p] QA President Andrews moderates a panel on the importance of data mining in long-term and post-acute care.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/qa-president-shares-marketing-expertise-at-achca-convocation"] Article
+[h3] QA President Shares Marketing Expertise At ACHCA Convocation
+[p] QA President CC Andrews presented a session on marketing at the annual ACHCA Convocation.MarketingQuantum Age Team3 minRead
+[a href="/insights/rise-in-senior-spending-fuels-longevity-economy"] Article
+[h3] Rise in Senior Spending Fuels Longevity Economy
+[p] Seniors are spending more money in the longevity economy.Longevity EconomyQuantum Age Team4 minRead
+[a href="/insights/the-case-for-bundled-payments"] Article
+[h3] Bundled Payments & Post-Acute Care
+[p] Bundled payments are becoming more popular due to the model's ability to improve quality and reduce costs, and LTPAC providers should pay close attention to it.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/ehr-implementation-made-easier"] Article
+[h3] EHR Implementation Made Easier
+[p] CAST has released new resources for LTPAC providers to help them implement EHRs more easily.Senior CareB2BQuantum Age Team3 minRead
+[a href="/insights/americans-unprepared-for-long-term-care"] Article
+[h3] Unprepared, Uniformed, and Reluctant to Leave Home
+[p] Americans 40 years and older are unprepared and uninformed about long term care, such as home care, senior living and assisted living.Senior CareB2BQuantum Age Team8 minRead
+[a href="/insights/harnessing-longevity-for-senior-care"] Article
+[h3] Harnessing Longevity For Senior Care
+[p] The baby boomer generation, who will longer than any generation in history, will have more time and more money to donate to charities.Senior CareLongevity EconomyQuantum Age Team4 minRead
+[a href="/insights/opportunity-is-knocking-at-the-senior-living-door"] Article
+[h3] Opportunity is Knocking at the Senior Living Door
+[p] AARP report on business opportunities in senior careSenior CareQuantum Age Team4 minRead
+[a href="/insights/urban-density-innovation-and-the-future-of-senior-housing"] Article
+[h3] Urban Density, Innovation, and the Future of Senior Housing
+[p] A look at the future of senior housing and how it will be affected by the shift to urban centers of innovation and megacities.TechnologyInnovationQuantum Age Team5 minRead
+[a href="/insights/meg-laporte-joins-quantum-age-collaborative"] Article
+[h3] Meg LaPorte Joins Quantum Age Collaborative
+[p] Meg LaPorte joins Quantum Age as content strategistSenior CareB2BQuantum Age Team3 minRead
+[a href="/insights/hospitals-are-out-but-you-already-knew-that"] Article
+[h3] Hospitals Are Out (But You Already Knew That)
+[p] Hospitals can be harmful to elders. Helping seniors stay in the community is a better idea, according to aging guru Bill Thomas, MD.Senior CareB2BQuantum Age Team5 minRead
+[a href="/insights/helping-clients-of-dementia-care-specialists-optimize-marketing"] Article
+[h3] Helping Clients of Dementia Care Specialists Optimize Marketing
+[p] Dementia Care Specialists Partners with Quantum Age Collaborative on Provider Marketing KitsMarketingQuantum Age Team3 minRead
+[a href="/insights/andrews-moderates-connect-2015-panel-of-national-experts"] Article
+[h3] Andrews Moderates Connect 2015 Panel of National Experts
+[p] Money, Differentiation, Innovation - why they matter in post-acuteSenior CareB2BQuantum Age Team3 minRead
+[a href="/insights/money-innovation-differentiation"] Article
+[h3] Money, Innovation, Differentiation
+[p] Can you differentiate your value proposition to top post-acute referral sources, backed by data-driven proof?TechnologyInnovationQuantum Age Team3 minRead
+[a href="/insights/what-makes-a-great-design...great"] Article
+[h3] What makes a great design...great?
+[p] CC Andrews shares her insights for the best at EFADesignQuantum Age Team4 minRead
+[a href="/insights/cc-andrews-emcees-2015-achca-awards-in-san-antonio"] Article
+[h3] CC Andrews Emcees 2015 ACHCA Awards in San Antonio
+[p] Quantum Age's CC Andrews Emcees 2015 ACHCA AwardsSenior CareB2BQuantum Age Team3 minRead
+[a href="/insights/the-rapidly-evolving-landscape-of-post-acute-care"] Article
+[h3] The Rapidly-Evolving Landscape of Post-Acute Care
+[p] A review of the segments of the industry - opportunities and challengesSenior CareB2BQuantum Age Team15 minRead
+[a href="/insights/connecting-creating-and-collaborating-for-excellence-in-healthcare"] Article
+[h3] Connecting, creating, and collaborating for excellence in healthcare
+[p] A dream made possible by healthcare's very best:  introducing Quantum Age CollaborativeSenior CareB2BQuantum Age Team5 minRead
+[a href="/insights/do-solutions-escape-vs-get-launched"] Article
+[h3] Do solutions escape vs. get launched?
+[p] If product or service launches happen less than smoothly, read on.Senior CareB2BQuantum Age Team4 minRead
+[a href="/insights/quantum-age-collaborative-and-client-in-the-news"] Article
+[h3] Quantum Age Collaborative and Redilearning quoted in McKnights
+[p] Education best practices for post-acute careSenior CareB2BQuantum Age Team3 minRead
+[a href="/insights/quantum-age-collaborative-achieves-hubspot-partner-certification-"] Article
+[h3] Quantum Age Collaborative Achieves HubSpot Partner Certification
+[p] HubSpot Partner CertificationSenior CareB2BQuantum Age Team3 minRead
+[h2] Want Insights Tailored to Your Business?
+[p] Get a custom market intelligence brief with competitive analysis, opportunity assessment, and growth strategies specific to your portfolio.
+[a href="/contact"] Request Strategic Brief
+[section ] 

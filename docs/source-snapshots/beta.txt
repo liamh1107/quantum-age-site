@@ -1,0 +1,158 @@
+# Text snapshot of https://quantum-age.com/beta
+# Captured 2026-10-06 by the prototype audit crawler (server-rendered HTML, tags reduced to [tag] markers)
+
+
+[nav] 
+[a href="/"] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[a href="/about"] About
+[button ] Services
+[button ] Industries
+[a href="/insights"] Insights
+[button ] Tools
+[a href="/contact"] Request Strategic Brief
+[button ] 
+[section ] Exclusive to the Longevity Economy
+[h1] B2B Marketing for the Longevity Economy
+[p] Strategic marketing and demand generation for operators, investors, and technology companies in senior living and care. Build pipeline, prove value, and position for maximum valuation.
+[a href="/beta/roi-calculator"] Run Your ROI
+[a href="/contact"] Request Strategic BriefPopulation 65+ by 20300M↑ 21%from 2020Metros with Zero New Supply0%Demand Gap0Kunits neededMarket Opportunity$0.0TExplore the opportunity
+[section ] Full-Spectrum Growth Solutions
+[h2] How We Accelerate Growth
+[p] Strategic marketing, demand generation, and market intelligence tailored to the unique dynamics of the longevity economy.
+[h3] M&A TransitionAccelerate Acquisitions & Exits
+[p] Strategic onboarding and positioning that maximizes valuation and accelerates integration timelines.
+[li] Reduce time-to-close by 40%
+[li] Increase valuation multiples
+[li] Seamless stakeholder alignment
+[a href="/services/ma-transition"] View Details
+[h3] Growth & Demand GenerationDrive Occupancy & Revenue
+[p] Multi-channel demand systems that fill pipelines, increase occupancy, and prove ROI at every stage.
+[li] Measurable pipeline growth
+[li] Higher occupancy rates
+[li] Reduced acquisition costs
+[a href="/services/growth"] View Details
+[h3] Brand & PositioningMarket Differentiation
+[p] Strategic positioning that creates category leadership and commands premium pricing.
+[li] Clear market differentiation
+[li] Premium pricing power
+[li] Thought leadership status
+[a href="/services/brand"] View DetailsPowered by gohuntr.com
+[h3] AI Velocity WebsitesFree Build, Performance-Based
+[p] High-converting websites built with AI velocity. We build for free, you pay only when it performs.
+[li] Launch in days, not months
+[li] Zero upfront investment
+[li] Conversion-optimized design
+[a href="https://gohuntr.com"] Learn MorePowered by gohuntr.com
+[h3] B2B Lead GenerationTargeted Pipeline Development
+[p] Precision-targeted outbound that connects you with qualified decision-makers in your ideal accounts.
+[li] Pre-qualified meetings booked
+[li] Account-based targeting
+[li] Scalable outbound systems
+[a href="https://gohuntr.com"] Learn More
+[a href="/contact"] Request Strategic Brief
+[section ] Free Interactive Tool
+[h2] Calculate Your Marketing ROI
+[p] See the projected revenue impact, valuation increase, and payback period specific to your business model in under 3 minutes.Built for Your IndustryUses real senior living metrics: occupancy rates, EBITDA margins, exit multiplesMultiple ScenariosGet tailored results for operators, investors, or tech companies
+[a href="/beta/roi-calculator"] 
+[button ] Run Your ROI Calculator
+[h3] Sample Results8 Communities, 800 BedsRevenue Lift$5.3MannuallyValuation Impact$12.7Mat exitROI2,844%year 1Payback1.3monthsBased on 82% → 92% occupancy improvementFree Tool
+[section id="market-insight"] Live Market Intelligence
+[h2] The Supply Crisis is Your Opportunity
+[p] Explore supply constraints and demand signals across 200+ metros. Click any market to see detailed opportunity metrics.65%Metros with Zero New Supply376KUnits Needed by 203013High-Opportunity Markets
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/us-states-map.png" alt="United States Map"] 
+[button ] Seattle, WA
+[button ] Portland, OR
+[button ] San Francisco, CA
+[button ] Los Angeles, CA
+[button ] Phoenix, AZ
+[button ] Denver, CO
+[button ] Dallas, TX
+[button ] Houston, TX
+[button ] Minneapolis, MN
+[button ] Chicago, IL
+[button ] Detroit, MI
+[button ] Cleveland, OH
+[button ] Pittsburgh, PA
+[button ] Atlanta, GA
+[button ] Tampa, FL
+[button ] Miami, FL
+[button ] Washington DC, DC
+[button ] Philadelphia, PA
+[button ] New York, NY
+[button ] Boston, MAHigh OpportunityMedium Opportunity
+[h3] Select a Metro
+[p] Click or hover over any market on the map to see detailed supply/demand metrics and opportunity scores.
+[p] Want the complete dataset for all 200+ metros?
+[button ] Download Full Market Analysis
+[section ] Who We Serve
+[h2] Built for Leaders in the Longevity Economy
+[p] Whether you're operating, investing, or innovating—we help you identify opportunity, accelerate growth, and position for maximum value.
+[button ] Senior Living Operators
+[button ] Investors
+[button ] Tech Companies
+[button ] Healthcare Tech
+[button ] Wellness Providers
+[h3] Senior Living Operators
+[p] Maximize occupancy. Accelerate value creation.
+[p] Whether you're preparing for exit, scaling your portfolio, or navigating market shifts, we position operators to command premium valuations and sustainable growth.
+[h4] Key Challenges We Solve
+[p] Occupancy pressure in competitive markets
+[p] Proving differentiation to investors and families
+[p] Pre-exit positioning and value optimization
+[h4] Outcomes You Can Expect
+[p] 15-25% occupancy lift through demand generation
+[p] Strategic positioning that attracts premium buyers
+[p] Clear market narrative that commands attention
+[button ] Explore Operator Solutions
+[button ] Download Market Brief
+[h2] Trusted by Industry Leaders
+[p] From operators to investors to technology companies, our clients achieve measurable growth in the longevity economy."Quantum Age helped us position our acquisition for maximum valuation. Their deep understanding of the longevity economy made all the difference."Sarah MitchellCEO, Heritage Senior Living12-community portfolio acquired by national operator"The demand generation strategy they built increased our qualified lead flow by 340% in six months. Finally, marketing that speaks the language of our buyers."Marcus ChenVP Growth, CareConnect TechnologiesB2B SaaS platform for senior care"Their market intelligence showed us untapped opportunities we had completely missed. The ROI on working with Quantum Age was immediate and significant."Jennifer TorresManaging Partner, Longevity Capital Partners$850M AUM in senior living investments
+[h2] Ready to Accelerate Your Growth?
+[p] Whether you're preparing for an exit, scaling demand, or entering new markets, we'll help you capture the longevity economy opportunity.
+[a href="/contact"] 
+[h3] Schedule a Call
+[p] 30-minute discovery session to explore opportunitiesLet's Talk 
+[a href="/beta/roi-calculator"] 
+[h3] Calculate Your ROI
+[p] See the potential impact on your business in 2 minutesTry the Calculator 
+[p] Trusted by operators, investors, and technology companies across the longevity economy
+[footer] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[p] B2B Marketing for the Longevity Economy. We help operators, investors, and technology companies grow with precision.
+[a href="https://linkedin.com/company/quantum-age"] 
+[a href="https://twitter.com/quantumage"] 
+[h3] Services
+[li] 
+[a href="/beta/services/ma-transition"] M&A Transition Marketing
+[li] 
+[a href="/beta/services/growth"] Growth & Demand Generation
+[li] 
+[a href="/beta/services/brand"] Brand & Positioning
+[li] 
+[a href="https://gohuntr.com/ai-velocity-websites"] AI Velocity Websites ↗
+[li] 
+[a href="https://gohuntr.com/b2b-lead-gen"] B2B Lead Generation ↗
+[h3] Industries
+[li] 
+[a href="/beta/operators"] Senior Living Operators
+[li] 
+[a href="/beta/investors"] Investors & Private Equity
+[li] 
+[a href="/beta/tech"] Technology Companies
+[li] 
+[a href="/beta/healthcare-tech"] Healthcare Technology
+[li] 
+[a href="/beta/wellness"] Wellness Providers
+[h3] Contact
+[li] 
+[a href="mailto:info@quantum-age.com"] info@quantum-age.com
+[li] 
+[a href="tel:+14406386990"] 440.638.6990
+[li] Serving clients internationally
+[a href="/contact"] 
+[button ] Get in Touch →© 2026 Quantum Age Collaborative. All rights reserved.
+[a href="/insights"] Insights
+[a href="/beta/roi-calculator"] ROI Calculator
+[a href="/contact"] Contact
+[section ] 

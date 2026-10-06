@@ -1,0 +1,109 @@
+# Text snapshot of https://quantum-age.com/solutions
+# Captured 2026-10-06 by the prototype audit crawler (server-rendered HTML, tags reduced to [tag] markers)
+
+
+[nav] 
+[a href="/"] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[a href="/solutions"] Solutions
+[a href="/approach"] Approach
+[a href="/about"] About
+[a href="/references"] References
+[a href="/contact"] Contact
+[button ] 
+[h1] Solutions
+[p] Elevate strategy. Accelerate growth.
+[p] Comprehensive marketing solutions tailored to your goals
+[h3] Strategize & Launch
+[p] Convert ideas to actions and execute faster. Generate revenue sooner.
+[li] •Market research and opportunity assessment
+[li] •Strategic planning and roadmap development
+[li] •Go-to-market strategy execution
+[li] •Launch support and optimization
+[a href="/solutions/strategize-launch"] Learn More
+[h3] Build Awareness
+[p] Go from risky and unknown to renown and famous.
+[li] •Brand positioning and messaging
+[li] •Public relations and media outreach
+[li] •Content marketing campaigns
+[li] •Digital and traditional advertising
+[a href="/solutions/build-awareness"] Learn More
+[h3] Be a Thought Leader
+[p] Become a respected resource and earn trust—and/or business—for life.
+[li] •Executive visibility programs
+[li] •Content development and publishing
+[li] •Speaking engagement coordination
+[li] •Industry recognition strategies
+[a href="/solutions/thought-leader"] Learn More
+[h3] Perform
+[p] Challenge, optimize, and energize your operations.
+[li] •Marketing operations audit
+[li] •Process optimization
+[li] •Team training and development
+[li] •Performance measurement and reporting
+[a href="/solutions/perform"] Learn More
+[h3] Network
+[p] Find the right people, gather them, energize them, and motivate action.
+[li] •Strategic partnership development
+[li] •Event planning and management
+[li] •Community building programs
+[li] •Stakeholder engagement strategies
+[a href="/solutions/network"] Learn More
+[h3] Generate Business
+[p] Target the right buyers, right messages, right campaigns, at the right time.
+[li] •Lead generation campaigns
+[li] •Sales enablement tools
+[li] •Account-based marketing
+[li] •Conversion optimization
+[a href="/solutions/generate-business"] Learn More
+[h2] The Collaborative Approach
+[p] Your success is our formulaYou
+[p] Your vision & goals+Team
+[p] Expert collaboration+Market
+[p] Deep insights+Opportunity
+[p] Strategic timing=Success
+[p] Measurable results
+[h2] Ready to Get Started?
+[p] Let's collaborate to find the right solution for your organization.
+[a href="/contact"] Let's Collaborate
+[footer] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[p] The only marketing firm in senior care steeped in both consumer and business-to-business.
+[h3] Quick Links
+[li] 
+[a href="/about"] About
+[li] 
+[a href="/solutions"] Services
+[li] 
+[a href="/team"] Team
+[li] 
+[a href="/insights"] Insights
+[li] 
+[a href="/contact"] Contact
+[h3] Our Services
+[li] 
+[a href="/solutions#strategize"] Strategize & Launch
+[li] 
+[a href="/solutions#awareness"] Build Awareness
+[li] 
+[a href="/solutions#thought-leadership"] Thought Leadership
+[li] 
+[a href="/solutions#perform"] Perform
+[li] 
+[a href="/solutions#network"] Network
+[li] 
+[a href="/solutions#generate"] Generate Business
+[h3] Get in Touch
+[li] 
+[a href="tel:4406386990"] 440.638.6990
+[li] 
+[a href="mailto:info@quantum-age.com"] info@quantum-age.com
+[li] Serving clients internationally
+[a href="#"] 
+[a href="#"] 
+[a href="#"] 
+[p] © 2026 Quantum Age Collaborative. All rights reserved.
+[a href="/privacy"] Privacy Policy
+[a href="/terms"] Terms of Service
+[a href="/beta"] QABeta
+[section ] 

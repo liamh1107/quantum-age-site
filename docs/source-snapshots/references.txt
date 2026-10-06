@@ -1,0 +1,69 @@
+# Text snapshot of https://quantum-age.com/references
+# Captured 2026-10-06 by the prototype audit crawler (server-rendered HTML, tags reduced to [tag] markers)
+
+
+[nav] 
+[a href="/"] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[a href="/solutions"] Solutions
+[a href="/approach"] Approach
+[a href="/about"] About
+[a href="/references"] References
+[a href="/contact"] Contact
+[button ] 
+[h1] References
+[p] Trusted by leading healthcare organizations
+[h3] Senior Living Operators
+[p] Leading providers trust us to elevate their brand and drive occupancy.
+[h3] Healthcare Organizations
+[p] Health systems and medical groups rely on our expertise to reach their audience.
+[h3] Industry Innovators
+[p] Technology companies and startups partner with us to enter the market.
+[h2] What Our Clients Say
+[p] Real results from real partnerships
+[p] "Quantum Age brings deep expertise and strategic thinking to every engagement. Their collaborative approach made all the difference."Scott BrownDirectorThe GREEN HOUSE Project
+[p] "Working with Quantum Age transformed our marketing approach. They understand senior care like no other agency."Margaret McConnellChairpersonNevada Board of Examiners for Long Term Care Administration
+[p] "The team's decades of experience in healthcare marketing delivered results faster than we expected."Rand JohnsonMarketing DirectorPrime Care Technologies
+[h2] Decades of Experience
+[p] Our team has worked with hundreds of healthcare organizations across the senior care continuum, from small startups to national providers. We bring deep industry knowledge and proven strategies that deliver results.20+Years of Experience200+Clients Served100%Senior Care Focused
+[footer] 
+[img src="https://019d7010-f64d-75c5-9022-57059f27e92c.mochausercontent.com/quantum-age-logo-vertical.svg" alt="Quantum Age"] 
+[p] The only marketing firm in senior care steeped in both consumer and business-to-business.
+[h3] Quick Links
+[li] 
+[a href="/about"] About
+[li] 
+[a href="/solutions"] Services
+[li] 
+[a href="/team"] Team
+[li] 
+[a href="/insights"] Insights
+[li] 
+[a href="/contact"] Contact
+[h3] Our Services
+[li] 
+[a href="/solutions#strategize"] Strategize & Launch
+[li] 
+[a href="/solutions#awareness"] Build Awareness
+[li] 
+[a href="/solutions#thought-leadership"] Thought Leadership
+[li] 
+[a href="/solutions#perform"] Perform
+[li] 
+[a href="/solutions#network"] Network
+[li] 
+[a href="/solutions#generate"] Generate Business
+[h3] Get in Touch
+[li] 
+[a href="tel:4406386990"] 440.638.6990
+[li] 
+[a href="mailto:info@quantum-age.com"] info@quantum-age.com
+[li] Serving clients internationally
+[a href="#"] 
+[a href="#"] 
+[a href="#"] 
+[p] © 2026 Quantum Age Collaborative. All rights reserved.
+[a href="/privacy"] Privacy Policy
+[a href="/terms"] Terms of Service
+[a href="/beta"] QABeta
+[section ] 

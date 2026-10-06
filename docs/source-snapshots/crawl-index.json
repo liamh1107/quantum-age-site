@@ -1,0 +1,932 @@
+[
+ {
+  "path": "/",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age | Senior Care Marketing & Strategy Experts"
+ },
+ {
+  "path": "/solutions",
+  "status": 200,
+  "soft404": false,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/approach",
+  "status": 200,
+  "soft404": false,
+  "title": "Our Approach — Quantum Age"
+ },
+ {
+  "path": "/about",
+  "status": 200,
+  "soft404": false,
+  "title": "About — Quantum Age"
+ },
+ {
+  "path": "/references",
+  "status": 200,
+  "soft404": false,
+  "title": "References — Quantum Age"
+ },
+ {
+  "path": "/contact",
+  "status": 200,
+  "soft404": false,
+  "title": "Contact — Quantum Age"
+ },
+ {
+  "path": "/team",
+  "status": 200,
+  "soft404": false,
+  "title": "Team — Quantum Age"
+ },
+ {
+  "path": "/insights",
+  "status": 200,
+  "soft404": false,
+  "title": "Insights — Quantum Age"
+ },
+ {
+  "path": "/privacy",
+  "status": 200,
+  "soft404": false,
+  "title": "Privacy Policy | Quantum Age"
+ },
+ {
+  "path": "/terms",
+  "status": 200,
+  "soft404": false,
+  "title": "Terms of Use | Quantum Age"
+ },
+ {
+  "path": "/beta",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age — Longevity Economy Growth Partners"
+ },
+ {
+  "path": "/sitemap.xml",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/robots.txt",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/blog",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/services",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/careers",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/faq",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/insights/",
+  "status": 200,
+  "soft404": false,
+  "title": "Insights — Quantum Age"
+ },
+ {
+  "path": "/admin",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/login",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/solutions/build-awareness",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/solutions/generate-business",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/solutions/network",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/solutions/perform",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/solutions/strategize-launch",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/solutions/thought-leader",
+  "status": 404,
+  "soft404": true,
+  "title": "Solutions — Quantum Age"
+ },
+ {
+  "path": "/insights/-recognizing-the-loneliness-crisis-among-older-adults-is-a-vital-first-step-",
+  "status": 200,
+  "soft404": false,
+  "title": "Recognizing the Loneliness Crisis Among Older Adults Is a Vital First Step — Quantum Age"
+ },
+ {
+  "path": "/insights/10-low-lift-marketing-moves-that-deliver-big-in-senior-care",
+  "status": 200,
+  "soft404": false,
+  "title": "10 Low-Lift Marketing Moves That Deliver Big in Senior Care — Quantum Age"
+ },
+ {
+  "path": "/insights/20-tips-for-kickstarting-your-content-marketing-part-2",
+  "status": 200,
+  "soft404": false,
+  "title": "20 Tips for Kickstarting Your Content Marketing (Part 2) — Quantum Age"
+ },
+ {
+  "path": "/insights/2020-predictions-in-senior-living-disruption-new-tech-workforce-challenges-and-pdpm",
+  "status": 200,
+  "soft404": false,
+  "title": "2020 Predictions in Senior Living: Disruption, New Tech, Workforce Challenges, and PDPM. — Quantum Age"
+ },
+ {
+  "path": "/insights/2025-aging-services-trends",
+  "status": 200,
+  "soft404": false,
+  "title": "2025 Aging Services Trends: What’s Next for the Industry? — Quantum Age"
+ },
+ {
+  "path": "/insights/4-simplified-steps-to-account-based-marketing-abm",
+  "status": 200,
+  "soft404": false,
+  "title": "4 Simplified Steps to Account-Based Marketing (ABM) — Quantum Age"
+ },
+ {
+  "path": "/insights/5-ways-to-obtain-brand-differentiation-with-membership-and-trade-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "5 Ways to Obtain Brand Differentiation with Membership and Trade Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/6-ways-to-achieve-your-business-development-goals-with-membership-and-trade-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "6 Ways to Achieve your Business Development Goals with Membership and Trade Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/a-crystal-ball-look-at-post-acute-care-senior-housing",
+  "status": 200,
+  "soft404": false,
+  "title": "A Crystal Ball Look at Post-Acute Care & Senior Housing — Quantum Age"
+ },
+ {
+  "path": "/insights/a-global-perspective-on-aging-the-longevity-dividend",
+  "status": 200,
+  "soft404": false,
+  "title": "A Global Perspective on Aging & the Longevity Dividend — Quantum Age"
+ },
+ {
+  "path": "/insights/a-new-report-packed-with-useful-data-ranks-states-based-on-delivery-of-long-term-services-and-supports",
+  "status": 200,
+  "soft404": false,
+  "title": "A New Report””Packed with Useful Data””Ranks States Based on Delivery of Long-Term Services and Supports — Quantum Age"
+ },
+ {
+  "path": "/insights/ability-user-conference",
+  "status": 200,
+  "soft404": false,
+  "title": "QA Team to Manage eHDS/Ability User Conference — Quantum Age"
+ },
+ {
+  "path": "/insights/adopting-new-media-without-abandoning-traditional-media-relations",
+  "status": 200,
+  "soft404": false,
+  "title": "Adopting New Media Without Abandoning Traditional Media Relations — Quantum Age"
+ },
+ {
+  "path": "/insights/aging-population-shrinking-economy",
+  "status": 200,
+  "soft404": false,
+  "title": "Aging Population, Shrinking Economy? — Quantum Age"
+ },
+ {
+  "path": "/insights/aging-services-marketers-meet-the-perennials",
+  "status": 200,
+  "soft404": false,
+  "title": "Aging Services Marketers: Meet the “Perennials” — Quantum Age"
+ },
+ {
+  "path": "/insights/ai-marketing-in-2026-what-niche-b2b-leaders-need-to-understand-now",
+  "status": 200,
+  "soft404": false,
+  "title": "AI Marketing in 2026: What Niche B2B Leaders Need to Understand Now — Quantum Age"
+ },
+ {
+  "path": "/insights/americans-unprepared-for-long-term-care",
+  "status": 200,
+  "soft404": false,
+  "title": "Unprepared, Uniformed, and Reluctant to Leave Home — Quantum Age"
+ },
+ {
+  "path": "/insights/an-unprepared-housing-market-and-the-longevity-economy",
+  "status": 200,
+  "soft404": false,
+  "title": "An Unprepared Housing Market and the Longevity Economy — Quantum Age"
+ },
+ {
+  "path": "/insights/andrews-moderates-connect-2015-panel-of-national-experts",
+  "status": 200,
+  "soft404": false,
+  "title": "Andrews Moderates Connect 2015 Panel of National Experts — Quantum Age"
+ },
+ {
+  "path": "/insights/becky-cook-joins-quantum-age-collaborative-team",
+  "status": 200,
+  "soft404": false,
+  "title": "Becky Cook Joins Quantum Age Collaborative Team — Quantum Age"
+ },
+ {
+  "path": "/insights/best-practices-of-social-medias-top-3-facebook-twitter-linkedin",
+  "status": 200,
+  "soft404": false,
+  "title": "Best Practices of Social Media’s Top 3: Facebook, Twitter, LinkedIn — Quantum Age"
+ },
+ {
+  "path": "/insights/caradays-positive-culture-showcased-in-provider",
+  "status": 200,
+  "soft404": false,
+  "title": "Caraday’s positive culture showcased in Provider — Quantum Age"
+ },
+ {
+  "path": "/insights/cc-andrews-emcees-2015-achca-awards-in-san-antonio",
+  "status": 200,
+  "soft404": false,
+  "title": "CC Andrews Emcees 2015 ACHCA Awards in San Antonio — Quantum Age"
+ },
+ {
+  "path": "/insights/cc-appointed-to-entrepreneurs-accelerated-group",
+  "status": 200,
+  "soft404": false,
+  "title": "CC appointed to Entrepreneur’s Accelerated Group — Quantum Age"
+ },
+ {
+  "path": "/insights/changing-direction-and-moving-forward-making-virtual-events-part-of-your-new-strategy",
+  "status": 200,
+  "soft404": false,
+  "title": "Changing Direction and Moving Forward: Making Virtual Events Part of Your New Strategy — Quantum Age"
+ },
+ {
+  "path": "/insights/combining-aging-and-innovation-is-great-but-elder-input-is-key",
+  "status": 200,
+  "soft404": false,
+  "title": "Combining Aging and Innovation is Great but Elder Input is Key — Quantum Age"
+ },
+ {
+  "path": "/insights/competition-reinvestment-the-future-of-ccrcs-senior-living",
+  "status": 200,
+  "soft404": false,
+  "title": "Competition & Reinvestment: the Future of CCRCs & Senior Living — Quantum Age"
+ },
+ {
+  "path": "/insights/connecting-creating-and-collaborating-for-excellence-in-healthcare",
+  "status": 200,
+  "soft404": false,
+  "title": "Connecting, creating, and collaborating for excellence in healthcare — Quantum Age"
+ },
+ {
+  "path": "/insights/content-confusion-consider-these-options-for-modern-content-marketers",
+  "status": 200,
+  "soft404": false,
+  "title": "Content Confusion? Consider These Options for Modern Content Marketers — Quantum Age"
+ },
+ {
+  "path": "/insights/covid-19-survival-guide-key-takeaways-for-your-organization",
+  "status": 200,
+  "soft404": false,
+  "title": "COVID-19 Survival Guide: Key Takeaways for Your Organization — Quantum Age"
+ },
+ {
+  "path": "/insights/cut-through-the-noise",
+  "status": 200,
+  "soft404": false,
+  "title": "Cut Through the Noise: Why Clarity Is Your Competitive Edge in Senior Living B2B Marketing — Quantum Age"
+ },
+ {
+  "path": "/insights/do-solutions-escape-vs-get-launched",
+  "status": 200,
+  "soft404": false,
+  "title": "Do solutions escape vs. get launched? — Quantum Age"
+ },
+ {
+  "path": "/insights/ehr-implementation-made-easier",
+  "status": 200,
+  "soft404": false,
+  "title": "EHR Implementation Made Easier — Quantum Age"
+ },
+ {
+  "path": "/insights/exploring-innovative-models-of-care",
+  "status": 200,
+  "soft404": false,
+  "title": "Exploring Innovative Models of Care — Quantum Age"
+ },
+ {
+  "path": "/insights/five-star-calculations-demystified",
+  "status": 200,
+  "soft404": false,
+  "title": "Five-Star Calculations Demystified — Quantum Age"
+ },
+ {
+  "path": "/insights/forum-speaks-out-on-the-potential-for-therapeutics-in-managing-covid-19",
+  "status": 200,
+  "soft404": false,
+  "title": "Forum speaks out on the potential for therapeutics in managing COVID-19 — Quantum Age"
+ },
+ {
+  "path": "/insights/four-impactful-b2b-marketing-strategies-you-may-be-missing-out-on",
+  "status": 200,
+  "soft404": false,
+  "title": "Four Impactful B2B Marketing Strategies You May Be Missing Out On — Quantum Age"
+ },
+ {
+  "path": "/insights/free-resident-engagement-resources-under-covid-19-restrictions",
+  "status": 200,
+  "soft404": false,
+  "title": "Free Resident Engagement Resources Under COVID-19 Restrictions — Quantum Age"
+ },
+ {
+  "path": "/insights/from-content-to-conversion-designing-marketing-that-moves-people",
+  "status": 200,
+  "soft404": false,
+  "title": "From Content to Conversion: Designing Marketing That Moves People — Quantum Age"
+ },
+ {
+  "path": "/insights/from-more-to-smarter-why-efficient-growth-is-the-new-mandate-for-b2b-marketing-in-2026",
+  "status": 200,
+  "soft404": false,
+  "title": "From “More” to “Smarter”: Why Efficient Growth Is the New Mandate for B2B Marketing in 2026 — Quantum Age"
+ },
+ {
+  "path": "/insights/global-innovation-in-aging-services-is-now-a-thing",
+  "status": 200,
+  "soft404": false,
+  "title": "Global Innovation in Aging Services is (Finally) a Thing — Quantum Age"
+ },
+ {
+  "path": "/insights/googles-ai-search-what-it-means-for-your-business-and-what-to-do-about-it",
+  "status": 200,
+  "soft404": false,
+  "title": "Google’s AI Search: What it means for your business (and what to do about it) — Quantum Age"
+ },
+ {
+  "path": "/insights/grim-outlook-for-medicare-funding-means-snfs-should-prepare-now",
+  "status": 200,
+  "soft404": false,
+  "title": "Grim Outlook for Medicare Funding Means SNFs Should Prepare Now — Quantum Age"
+ },
+ {
+  "path": "/insights/harnessing-longevity-for-senior-care",
+  "status": 200,
+  "soft404": false,
+  "title": "Harnessing Longevity For Senior Care — Quantum Age"
+ },
+ {
+  "path": "/insights/heading-to-san-antonio-for-argentum-some-travel-highlights-from-a-local",
+  "status": 200,
+  "soft404": false,
+  "title": "Heading to San Antonio for Argentum? Some Travel Highlights from a “Local” — Quantum Age"
+ },
+ {
+  "path": "/insights/helping-clients-of-dementia-care-specialists-optimize-marketing",
+  "status": 200,
+  "soft404": false,
+  "title": "Helping Clients of Dementia Care Specialists Optimize Marketing — Quantum Age"
+ },
+ {
+  "path": "/insights/hospitals-are-out-but-you-already-knew-that",
+  "status": 200,
+  "soft404": false,
+  "title": "Hospitals Are Out (But You Already Knew That) — Quantum Age"
+ },
+ {
+  "path": "/insights/how-gpt4-can-be-used-for-senior-care-and-niche-content-marketing",
+  "status": 200,
+  "soft404": false,
+  "title": "How GPT4 can be used for Senior Care and Niche Content Marketing — Quantum Age"
+ },
+ {
+  "path": "/insights/how-to-be-a-better-corporate-partner-to-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "How to be a Better Corporate Partner to Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/how-to-keep-content-efforts-from-slipping-through-the-cracks",
+  "status": 200,
+  "soft404": false,
+  "title": "How to Keep Content Efforts from Slipping Through the Cracks — Quantum Age"
+ },
+ {
+  "path": "/insights/innovation-and-design-meet-to-create-person-centered-furnishings",
+  "status": 200,
+  "soft404": false,
+  "title": "Furnishings Combine Innovation and Person-Centered Design — Quantum Age"
+ },
+ {
+  "path": "/insights/intergenerational-programming-popular-but-not-substantive-for-senior-housing-providers",
+  "status": 200,
+  "soft404": false,
+  "title": "Intergenerational Programming Popular But Not Substantive in Senior Housing Communities — Quantum Age"
+ },
+ {
+  "path": "/insights/its-time-for-long-term-care-providers-to-take-the-lead-on-reframing-aging",
+  "status": 200,
+  "soft404": false,
+  "title": "It’s Time for Long Term Care Providers to Take the Lead on Reframing Aging — Quantum Age"
+ },
+ {
+  "path": "/insights/keep-it-small",
+  "status": 200,
+  "soft404": false,
+  "title": "Keep It Small — Quantum Age"
+ },
+ {
+  "path": "/insights/leadership-in-times-of-crisis",
+  "status": 200,
+  "soft404": false,
+  "title": "Leadership in times of crisis — Quantum Age"
+ },
+ {
+  "path": "/insights/lets-take-a-deep-dive-into-the-policy-response-to-global-aging",
+  "status": 200,
+  "soft404": false,
+  "title": "A Deep Dive Into the Policy Response to Global Aging — Quantum Age"
+ },
+ {
+  "path": "/insights/life-expectancy-disparities-point-to-opportunities-for-aging-services-innovation",
+  "status": 200,
+  "soft404": false,
+  "title": "Life Expectancy Disparities Point to Opportunities for Aging Services Innovation — Quantum Age"
+ },
+ {
+  "path": "/insights/marketing-during-a-national-crisis-doesnt-need-to-stop-but-it-needs-to-adjust",
+  "status": 200,
+  "soft404": false,
+  "title": "Marketing During a National Crisis Doesn’t Need to Stop, But It Needs to Adjust — Quantum Age"
+ },
+ {
+  "path": "/insights/medicaid-may-strike-a-sour-note-for-unprepared-providers",
+  "status": 200,
+  "soft404": false,
+  "title": "Medicaid May Strike a Sour Note for Unprepared Providers — Quantum Age"
+ },
+ {
+  "path": "/insights/meg-laporte-joins-quantum-age-collaborative",
+  "status": 200,
+  "soft404": false,
+  "title": "Meg LaPorte Joins Quantum Age Collaborative — Quantum Age"
+ },
+ {
+  "path": "/insights/money-innovation-differentiation",
+  "status": 200,
+  "soft404": false,
+  "title": "Money, Innovation, Differentiation — Quantum Age"
+ },
+ {
+  "path": "/insights/new-ideas-for-innovation-in-technology-for-seniors",
+  "status": 200,
+  "soft404": false,
+  "title": "A Fresh Take on Senior Care Technology and Innovation — Quantum Age"
+ },
+ {
+  "path": "/insights/new-payment-models-foster-innovation",
+  "status": 200,
+  "soft404": false,
+  "title": "New Payment Models Foster Care Innovations — Quantum Age"
+ },
+ {
+  "path": "/insights/nine-tips-for-creating-irresistible-content",
+  "status": 200,
+  "soft404": false,
+  "title": "20 Tips for Kickstarting Your Content Marketing (Part 1) — Quantum Age"
+ },
+ {
+  "path": "/insights/opportunity-is-knocking-at-the-senior-living-door",
+  "status": 200,
+  "soft404": false,
+  "title": "Opportunity is Knocking at the Senior Living Door — Quantum Age"
+ },
+ {
+  "path": "/insights/qa-discusses-relationship-building-post-covid-19",
+  "status": 200,
+  "soft404": false,
+  "title": "QA discusses relationship building post-COVID-19 — Quantum Age"
+ },
+ {
+  "path": "/insights/qa-president-leads-two-sessions-at-smash-and-shine",
+  "status": 200,
+  "soft404": false,
+  "title": "QA President Leads Two Sessions at SMASH and SHINE — Quantum Age"
+ },
+ {
+  "path": "/insights/qa-president-moderates-at-ltc-100",
+  "status": 200,
+  "soft404": false,
+  "title": "QA President Moderates at LTC 100 — Quantum Age"
+ },
+ {
+  "path": "/insights/qa-president-shares-marketing-expertise-at-achca-convocation",
+  "status": 200,
+  "soft404": false,
+  "title": "QA President Shares Marketing Expertise At ACHCA Convocation — Quantum Age"
+ },
+ {
+  "path": "/insights/quantum-age-collaborative-achieves-hubspot-partner-certification-",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age Collaborative Achieves HubSpot Partner Certification — Quantum Age"
+ },
+ {
+  "path": "/insights/quantum-age-collaborative-and-client-in-the-news",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age Collaborative and Redilearning quoted in McKnights — Quantum Age"
+ },
+ {
+  "path": "/insights/quantum-age-leads-panel-on-technology-in-senior-living",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age Leads Panel on Technology in Senior Living — Quantum Age"
+ },
+ {
+  "path": "/insights/quantum-age-president-elected-to-advancing-excellence-board",
+  "status": 200,
+  "soft404": false,
+  "title": "Quantum Age President Elected to Advancing Excellence Board — Quantum Age"
+ },
+ {
+  "path": "/insights/recruiting-for-the-future-find-your-why-first",
+  "status": 200,
+  "soft404": false,
+  "title": "Recruiting for the future? Find your ‘why’ first — Quantum Age"
+ },
+ {
+  "path": "/insights/reputation-at-risk-why-skilled-nursing-needs-a-new-playbook-for-online-perception",
+  "status": 200,
+  "soft404": false,
+  "title": "Reputation at Risk: Why Skilled Nursing Needs a New Playbook for Online Perception — Quantum Age"
+ },
+ {
+  "path": "/insights/reputation-is-a-strategy-building-trust-before-you-need-it",
+  "status": 200,
+  "soft404": false,
+  "title": "Reputation Is a Strategy: Building Trust Before You Need It — Quantum Age"
+ },
+ {
+  "path": "/insights/requirements-of-participation-final-rule-creates-opportunities",
+  "status": 200,
+  "soft404": false,
+  "title": "Wide-Reaching CMS Rule Opens the Door for Innovation — Quantum Age"
+ },
+ {
+  "path": "/insights/retirement-income-healthcare-costs-and-homeownership-food-for-thought-on-the-future-of-the-longevity-economy",
+  "status": 200,
+  "soft404": false,
+  "title": "Retirement Income, Healthcare Costs, and Homeownership””Food for Thought on the Future of the Longevity Economy — Quantum Age"
+ },
+ {
+  "path": "/insights/rise-in-senior-spending-fuels-longevity-economy",
+  "status": 200,
+  "soft404": false,
+  "title": "Rise in Senior Spending Fuels Longevity Economy — Quantum Age"
+ },
+ {
+  "path": "/insights/saiva-healthcare-featured-in-mcknights",
+  "status": 200,
+  "soft404": false,
+  "title": "SAIVA Healthcare featured in McKnight’s — Quantum Age"
+ },
+ {
+  "path": "/insights/seo-old-school-tactic-or-leading-edge-strategy",
+  "status": 200,
+  "soft404": false,
+  "title": "SEO: Old-School Tactic or Leading-Edge Strategy? — Quantum Age"
+ },
+ {
+  "path": "/insights/shifting-to-a-quality-mindset-why-abm-is-a-game-changer",
+  "status": 200,
+  "soft404": false,
+  "title": "Shifting to a Quality Mindset: Why ABM is a Game-Changer — Quantum Age"
+ },
+ {
+  "path": "/insights/snf-survival-depends-on-understanding-the-new-hospital-landscape-among-other-factors",
+  "status": 200,
+  "soft404": false,
+  "title": "SNF Survival Depends on Understanding the New Hospital Landscape, Among Other Factors — Quantum Age"
+ },
+ {
+  "path": "/insights/survey-points-to-best-practices-for-successful-innovation",
+  "status": 200,
+  "soft404": false,
+  "title": "Survey Points to Best Practices for Successful Innovation — Quantum Age"
+ },
+ {
+  "path": "/insights/taking-innovation-from-mysterious-to-magnificent",
+  "status": 200,
+  "soft404": false,
+  "title": "Taking Innovation from Mysterious to Magnificent — Quantum Age"
+ },
+ {
+  "path": "/insights/technology-staff-training-taking-it-to-the-next-level",
+  "status": 200,
+  "soft404": false,
+  "title": "Technology & Staff Training: Taking It to the Next Level — Quantum Age"
+ },
+ {
+  "path": "/insights/telomeres-mitochondria-and-healthy-longevity",
+  "status": 200,
+  "soft404": false,
+  "title": "Telomeres, Mitochondria, and Healthy Longevity — Quantum Age"
+ },
+ {
+  "path": "/insights/the-4-keys-to-maximizing-your-sponsorship-expenditures",
+  "status": 200,
+  "soft404": false,
+  "title": "The 4 Keys to Maximizing Your Sponsorship Expenditures — Quantum Age"
+ },
+ {
+  "path": "/insights/the-4-keys-to-maximizing-your-sponsorship-expenditures-1",
+  "status": 200,
+  "soft404": false,
+  "title": "The 4 Keys to Maximizing Your Sponsorship Expenditures — Quantum Age"
+ },
+ {
+  "path": "/insights/the-case-for-bundled-payments",
+  "status": 200,
+  "soft404": false,
+  "title": "Bundled Payments & Post-Acute Care — Quantum Age"
+ },
+ {
+  "path": "/insights/the-disease-of-aging-airbnb-and-products-for-longevity",
+  "status": 200,
+  "soft404": false,
+  "title": "The Disease of Aging, Airbnb, and Products for Longevity — Quantum Age"
+ },
+ {
+  "path": "/insights/the-dollars-and-sense-of-the-business-of-aging",
+  "status": 200,
+  "soft404": false,
+  "title": "The Dollars and Sense of the Business of Aging — Quantum Age"
+ },
+ {
+  "path": "/insights/the-hidden-cost-of-diy-events",
+  "status": 200,
+  "soft404": false,
+  "title": "The Hidden Cost of DIY Events — Quantum Age"
+ },
+ {
+  "path": "/insights/the-longevity-economy-observations-opportunities",
+  "status": 200,
+  "soft404": false,
+  "title": "The Longevity Economy: Observations & Opportunities — Quantum Age"
+ },
+ {
+  "path": "/insights/the-memory-care-design-challenge-presented-at-efa",
+  "status": 200,
+  "soft404": false,
+  "title": "The Memory Care Design Challenge Presented at EFA — Quantum Age"
+ },
+ {
+  "path": "/insights/the-need-for-snf-care-way-more-likely-for-you-and-me-and-everyone-else-but-an-opportunity-for-providers",
+  "status": 200,
+  "soft404": false,
+  "title": "The Need for SNF Care Way More Likely for You and Me (and Everyone Else) But an Opportunity for Providers — Quantum Age"
+ },
+ {
+  "path": "/insights/the-power-of-niche-marketing-why-going-narrow-can-help-you-go-big",
+  "status": 200,
+  "soft404": false,
+  "title": "The Power of Niche Marketing: Why Going Narrow Can Help You Go Big — Quantum Age"
+ },
+ {
+  "path": "/insights/the-rapidly-evolving-landscape-of-post-acute-care",
+  "status": 200,
+  "soft404": false,
+  "title": "The Rapidly-Evolving Landscape of Post-Acute Care — Quantum Age"
+ },
+ {
+  "path": "/insights/up-and-coming-housing-options-for-older-adults-are-making-their-mark-in-the-longevity-economy",
+  "status": 200,
+  "soft404": false,
+  "title": "Up and Coming Housing Options for Older Adults are Making their Mark in the Longevity Economy — Quantum Age"
+ },
+ {
+  "path": "/insights/urban-density-innovation-and-the-future-of-senior-housing",
+  "status": 200,
+  "soft404": false,
+  "title": "Urban Density, Innovation, and the Future of Senior Housing — Quantum Age"
+ },
+ {
+  "path": "/insights/urbanites-want-to-stay-in-the-city",
+  "status": 200,
+  "soft404": false,
+  "title": "Survey Finds Urbanites Confident About Staying in Cities as they Age — Quantum Age"
+ },
+ {
+  "path": "/insights/webinar-unveils-innovations-in-senior-care",
+  "status": 200,
+  "soft404": false,
+  "title": "Webinar Unveils Innovations in Senior Care — Quantum Age"
+ },
+ {
+  "path": "/insights/what-makes-a-great-design...great",
+  "status": 200,
+  "soft404": false,
+  "title": "What makes a great design...great? — Quantum Age"
+ },
+ {
+  "path": "/insights/what-the-latest-ai-marketing-trends-mean-for-senior-care-b2b-marketers",
+  "status": 200,
+  "soft404": false,
+  "title": "What the Latest AI Marketing Trends Mean for Senior Care B2B Marketers — Quantum Age"
+ },
+ {
+  "path": "/insights/what-to-do-with-that-now-obsolete-event-plan-you-do-have-options",
+  "status": 200,
+  "soft404": false,
+  "title": "What to Do with That (Now Obsolete) Event Plan: You DO Have Options — Quantum Age"
+ },
+ {
+  "path": "/insights/what-you-need-to-know-about-corporate-partnerships-with-trade-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "What You Need To Know About Corporate Partnerships With Trade Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/why-and-how-to-position-your-company-as-a-knowledge-leader-through-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "Why and How to Position Your Company as a Knowledge Leader through Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/why-and-how-you-should-align-your-company-with-associations",
+  "status": 200,
+  "soft404": false,
+  "title": "Why and How You Should Align Your Company with Associations — Quantum Age"
+ },
+ {
+  "path": "/insights/why-intergenerational-programs-are-future-of-aging-services",
+  "status": 200,
+  "soft404": false,
+  "title": "Here's Why Intergenerational Programs are The Future of Aging Services — Quantum Age"
+ },
+ {
+  "path": "/insights/why-reputation-management-is-now-mission-critical-for-senior-living-operators",
+  "status": 200,
+  "soft404": false,
+  "title": "Why Reputation Management Is Now Mission-Critical for Senior Living Operators — Quantum Age"
+ },
+ {
+  "path": "/insights/will-i-see-you-at-leadingage",
+  "status": 200,
+  "soft404": false,
+  "title": "Will I See You at LeadingAge? — Quantum Age"
+ },
+ {
+  "path": "/insights/will-senior-housing-be-affordable-and-meet-the-design-needs-of-older-adults",
+  "status": 200,
+  "soft404": false,
+  "title": "Will Senior Housing Be Affordable and Meet the Design Needs of Older Adults? — Quantum Age"
+ },
+ {
+  "path": "/insights/your-cheat-sheet-for-2018-senior-housing-trends-predictions",
+  "status": 200,
+  "soft404": false,
+  "title": "Your Cheat Sheet for 2018 Senior Living Trends & Predictions — Quantum Age"
+ },
+ {
+  "path": "/insights/your-post-covid-19-marketing-plan-cant-wait",
+  "status": 200,
+  "soft404": false,
+  "title": "Your Post-COVID-19 Marketing Plan Can’t Wait — Quantum Age"
+ },
+ {
+  "path": "/insights/ziegler-senior-living-150-list-offers-noteworthy-takeaways-and-some-details",
+  "status": 200,
+  "soft404": false,
+  "title": "Ziegler Senior Living 150 List Offers Noteworthy Takeaways and Details — Quantum Age"
+ },
+ {
+  "path": "/beta/healthcare-tech",
+  "status": 200,
+  "soft404": false,
+  "title": "Healthcare Tech — Quantum Age"
+ },
+ {
+  "path": "/beta/investors",
+  "status": 200,
+  "soft404": false,
+  "title": "For Investors — Quantum Age"
+ },
+ {
+  "path": "/beta/operators",
+  "status": 200,
+  "soft404": false,
+  "title": "For Operators — Quantum Age"
+ },
+ {
+  "path": "/beta/roi-calculator",
+  "status": 200,
+  "soft404": false,
+  "title": "ROI Calculator — Quantum Age"
+ },
+ {
+  "path": "/beta/services/brand",
+  "status": 200,
+  "soft404": false,
+  "title": "Brand Strategy — Quantum Age"
+ },
+ {
+  "path": "/beta/services/growth",
+  "status": 200,
+  "soft404": false,
+  "title": "Growth Marketing — Quantum Age"
+ },
+ {
+  "path": "/beta/services/ma-transition",
+  "status": 200,
+  "soft404": false,
+  "title": "M&A Transition Services — Quantum Age"
+ },
+ {
+  "path": "/beta/tech",
+  "status": 200,
+  "soft404": false,
+  "title": "For Tech & Innovators — Quantum Age"
+ },
+ {
+  "path": "/beta/wellness",
+  "status": 200,
+  "soft404": false,
+  "title": "Wellness — Quantum Age"
+ },
+ {
+  "path": "/services/brand",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/services/growth",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/services/ma-transition",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/blog/up-and-coming-housing-options-for-older-adults-are-making-their-mark-in-the-longevity-economy",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ },
+ {
+  "path": "/blog/the-longevity-economy-observations-opportunities",
+  "status": 404,
+  "soft404": true,
+  "title": "Quantum Age"
+ }
+]
