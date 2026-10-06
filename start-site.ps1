@@ -3,6 +3,25 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location -LiteralPath $root
 
+$tools = Join-Path $root 'tools'
+New-Item -ItemType Directory -Force -Path $tools | Out-Null
+$logFile = Join-Path $tools 'start-site.log'
+try { Start-Transcript -LiteralPath $logFile -Force | Out-Null } catch {}
+
+# Any unexpected error is printed and logged instead of closing the window.
+trap {
+  Write-Host ''
+  Write-Host "start-site stopped: $($_.Exception.Message)" -ForegroundColor Red
+  Write-Host $_.InvocationInfo.PositionMessage
+  Write-Host "Log: $logFile"
+  try { Stop-Transcript | Out-Null } catch {}
+  exit 1
+}
+
+# Single quotes are doubled so paths like C:\Users\O'Brien work inside -Command strings.
+function Quote([string]$Text) { return "'" + ($Text -replace "'", "''") + "'" }
+$powershellExe = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
+
 # Must match the port in package.json ("start": "next start -p 4317").
 $appPort = 4317
 $publicHost = 'testsite.4eos.com'
@@ -258,7 +277,9 @@ function Get-PublicIPv4 {
 }
 
 function Enable-InboundPort([int]$Port, [string]$Name) {
-  $listed = netsh advfirewall firewall show rule name="$Name" 2>$null
+  # Windows PowerShell 5.1 turns redirected native stderr into a terminating error under 'Stop'.
+  $ErrorActionPreference = 'Continue'
+  $listed = (netsh advfirewall firewall show rule name="$Name" 2>&1 | Out-String)
   if ($LASTEXITCODE -eq 0 -and $listed -match 'Enabled:\s+Yes') { return $true }
   netsh advfirewall firewall delete rule name="$Name" | Out-Null
   netsh advfirewall firewall add rule name="$Name" dir=in action=allow protocol=TCP localport=$Port profile=any remoteip=any | Out-Null
@@ -284,8 +305,6 @@ if ($publicIp -and $proxyNames -notcontains $publicIp) {
   $proxyNames += $publicIp
 }
 $internalNames = @($proxyNames | Where-Object { $_ -and $_ -ne $publicHost })
-$tools = Join-Path $root 'tools'
-New-Item -ItemType Directory -Force -Path $tools | Out-Null
 $caddyConfig = Join-Path $tools 'Caddyfile'
 $internalSites = ($internalNames -join ', ')
 $upstream = "127.0.0.1:$appPort"
@@ -311,10 +330,35 @@ if ($LASTEXITCODE -ne 0) {
   Write-Host 'The certificate was not added. The site still opens, and the browser will warn until an Administrator window runs: caddy trust'
 }
 
+# Caddy cannot start if something else holds 80 or 443. A Caddy left over from an earlier run is
+# stopped; anything else is reported, because its window would otherwise close with no message.
+foreach ($port in @(80, 443)) {
+  $listeners = @(Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue)
+  foreach ($ownerId in @($listeners | ForEach-Object { $_.OwningProcess } | Select-Object -Unique)) {
+    $proc = Get-Process -Id $ownerId -ErrorAction SilentlyContinue
+    $name = if ($proc) { $proc.ProcessName } else { "PID $ownerId" }
+    if ($name -eq 'caddy') {
+      Write-Host "Stopping the Caddy from an earlier run (port $port)..."
+      Stop-Process -Id $ownerId -Force
+      Start-Sleep -Milliseconds 500
+    } elseif ($ownerId -eq 4) {
+      Write-Host "Port $port is held by Windows (http.sys), usually IIS or the World Wide Web Publishing Service."
+      Write-Host 'Stop that service (or uninstall IIS), then run start-site.bat again.'
+      exit 1
+    } else {
+      Write-Host "Port $port is already in use by $name (PID $ownerId). Close it, then run start-site.bat again."
+      exit 1
+    }
+  }
+}
+
+# Both windows use -NoExit so a failure stays on screen instead of closing the window.
+$caddyCommand = "& $(Quote $caddy) run --config $(Quote $caddyConfig); Write-Host ''; Write-Host ('Caddy stopped (exit ' + `$LASTEXITCODE + '). Read the messages above.') -ForegroundColor Red"
+# npm.cmd, not npm: recent Node installs add npm.ps1, which Windows' default execution policy blocks.
 # NEXT_PUBLIC_SITE_URL is read at build time for share-image and Open Graph URLs.
-$serverCommand = "Set-Location -LiteralPath '$root'; `$env:NEXT_PUBLIC_SITE_URL = 'https://$publicHost'; npm run build; if (`$LASTEXITCODE -ne 0) { Write-Host 'Production build failed.'; exit `$LASTEXITCODE }; npm run start"
-Start-Process -FilePath $caddy -WorkingDirectory $root -ArgumentList @('run', '--config', $caddyConfig)
-Start-Process -FilePath "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -WorkingDirectory $root -ArgumentList @('-NoExit', '-NoProfile', '-Command', $serverCommand)
+$serverCommand = "Set-Location -LiteralPath $(Quote $root); `$env:NEXT_PUBLIC_SITE_URL = $(Quote "https://$publicHost"); npm.cmd run build; if (`$LASTEXITCODE -ne 0) { Write-Host 'Production build failed. Read the messages above.' -ForegroundColor Red } else { npm.cmd run start }"
+Start-Process -FilePath $powershellExe -WorkingDirectory $root -ArgumentList @('-NoExit', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-Command', $caddyCommand)
+Start-Process -FilePath $powershellExe -WorkingDirectory $root -ArgumentList @('-NoExit', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-Command', $serverCommand)
 $httpOpen = Enable-InboundPort 80 '4EOS HTTP'
 $httpsOpen = Enable-InboundPort 443 '4EOS HTTPS'
 if (-not $httpOpen -or -not $httpsOpen) {
@@ -344,3 +388,4 @@ if ($lanIp) {
 if ($wanReady) {
   Write-Host "Asked the router to forward internet ports 80 and 443 to $lanIp."
 }
+try { Stop-Transcript | Out-Null } catch {}

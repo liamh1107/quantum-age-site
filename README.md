@@ -72,8 +72,11 @@ On each run it:
 2. Stops if port 4317 is already in use (for example, an earlier run is still open).
 3. Finds Caddy, or downloads it into `tools\` (ignored by git).
 4. Writes `tools\Caddyfile`, which proxies the domain and local addresses to `127.0.0.1:4317`.
-5. Opens Caddy and a PowerShell window that builds with `NEXT_PUBLIC_SITE_URL=https://testsite.4eos.com` and starts the production server.
-6. Opens firewall ports 80 and 443 and asks the router (UPnP) to forward them to this PC.
+5. Stops a Caddy left over from an earlier run, and stops with a message if anything else (such as IIS) holds port 80 or 443.
+6. Opens Caddy and a PowerShell window that builds with `NEXT_PUBLIC_SITE_URL=https://testsite.4eos.com` and starts the production server.
+7. Opens firewall ports 80 and 443 and asks the router (UPnP) to forward them to this PC.
+
+All three windows stay open when something fails, so the error stays on screen. The launcher's own output is also saved to `tools\start-site.log`.
 
 The domain's DNS must point at the network's public IP, and the router must forward external ports 80 and 443 to this PC (not to 4317). To use a different domain, change `$publicHost` at the top of `start-site.ps1`.
 
