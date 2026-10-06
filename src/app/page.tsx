@@ -3,6 +3,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Rings, FormulaDiagram } from "@/components/brand/rings";
 import { CtaBand, SectionHeading, TextLink } from "@/components/site/blocks";
+import { Converge, Parallax } from "@/components/motion/scroll-linked";
 import { TestimonialQuote } from "@/components/site/testimonial";
 import { Portrait } from "@/components/site/portrait";
 import { ArticleFeature } from "@/components/site/article-item";
@@ -42,10 +43,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative mx-auto hidden w-full max-w-[460px] sm:block lg:col-span-5">
-            <Rings className="w-full" />
+            <Parallax speed={0.14}>
+              <Rings className="w-full" />
+            </Parallax>
           </div>
         </div>
-        <div className="border-t border-stone bg-[#efebe4]">
+        <div className="relative border-t border-stone bg-[#efebe4]">
           <div className="container-page flex flex-col gap-3 py-5 md:flex-row md:items-baseline md:gap-8">
             <h2 className="eyebrow shrink-0 font-sans text-muted-foreground">Who we work with</h2>
             <ul className="flex flex-wrap gap-x-6 gap-y-1 text-[0.9375rem] font-medium text-ink">
@@ -127,13 +130,13 @@ export default function HomePage() {
       {/* Collaborative formula */}
       <section className="section" aria-labelledby="formula-heading">
         <div className="container-page grid items-center gap-12 lg:grid-cols-12">
-          <div className="order-2 mx-auto w-full max-w-[420px] lg:order-1 lg:col-span-5">
+          <Converge className="order-2 mx-auto w-full max-w-[420px] lg:order-1 lg:col-span-5">
             <FormulaDiagram
               labels={formula.parts.map((p) => p.term) as [string, string, string, string]}
               result={formula.result.term}
-              className="w-full"
+              className="w-full overflow-visible"
             />
-          </div>
+          </Converge>
           <div className="order-1 lg:order-2 lg:col-span-6 lg:col-start-7">
             <SectionHeading id="formula-heading" eyebrow={formula.title} title={formula.subtitle} />
             <ol className="mt-8 border-b border-stone">

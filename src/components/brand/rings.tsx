@@ -40,11 +40,11 @@ export function FormulaDiagram({
   result: string;
   className?: string;
 }) {
-  const parts: { cx: number; cy: number; tx: number; ty: number; anchor: "middle" | "start" | "end" }[] = [
-    { cx: 200, cy: 140, tx: 200, ty: 36, anchor: "middle" },
-    { cx: 260, cy: 200, tx: 372, ty: 206, anchor: "end" },
-    { cx: 200, cy: 260, tx: 200, ty: 378, anchor: "middle" },
-    { cx: 140, cy: 200, tx: 28, ty: 206, anchor: "start" },
+  const parts: { cx: number; cy: number; dx: number; dy: number; tx: number; ty: number; anchor: "middle" | "start" | "end" }[] = [
+    { cx: 200, cy: 140, dx: 0, dy: -1, tx: 200, ty: 36, anchor: "middle" },
+    { cx: 260, cy: 200, dx: 1, dy: 0, tx: 372, ty: 206, anchor: "end" },
+    { cx: 200, cy: 260, dx: 0, dy: 1, tx: 200, ty: 378, anchor: "middle" },
+    { cx: 140, cy: 200, dx: -1, dy: 0, tx: 28, ty: 206, anchor: "start" },
   ];
   return (
     <svg viewBox="0 0 400 400" className={cn("block", className)} aria-hidden="true" focusable="false">
@@ -54,6 +54,8 @@ export function FormulaDiagram({
           cx={p.cx}
           cy={p.cy}
           r={92}
+          className="formula-part"
+          style={{ "--dx": p.dx, "--dy": p.dy } as React.CSSProperties}
           fill={i % 2 === 0 ? "rgba(141,198,63,0.16)" : "rgba(112,69,110,0.08)"}
           stroke={i % 2 === 0 ? "var(--green)" : "var(--plum)"}
           strokeWidth={1.5}
@@ -71,10 +73,12 @@ export function FormulaDiagram({
           {labels[i]}
         </text>
       ))}
-      <rect x={160} y={176} width={80} height={48} rx={10} fill="var(--plum)" />
-      <text x={200} y={206} textAnchor="middle" className="font-sans" style={{ fontSize: 16, fontWeight: 700 }} fill="#fff">
-        {result}
-      </text>
+      <g className="formula-core">
+        <rect x={160} y={176} width={80} height={48} rx={10} fill="var(--plum)" />
+        <text x={200} y={206} textAnchor="middle" className="font-sans" style={{ fontSize: 16, fontWeight: 700 }} fill="#fff">
+          {result}
+        </text>
+      </g>
     </svg>
   );
 }

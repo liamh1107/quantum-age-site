@@ -2,7 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Figtree, Source_Serif_4 } from "next/font/google";
 import { PrototypeBanner, SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
+import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { site } from "@/content/site";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -49,18 +51,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${figtree.variable} ${sourceSerif.variable}`}>
       <body className="flex min-h-dvh flex-col">
-        <a
-          href="#main"
-          className="sr-only z-50 bg-plum px-4 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
-        >
-          Skip to main content
-        </a>
-        <PrototypeBanner />
-        <SiteHeader />
-        <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
-          {children}
-        </main>
-        <SiteFooter />
+        <SmoothScroll>
+          <a
+            href="#main"
+            className="sr-only z-50 bg-plum px-4 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+          >
+            Skip to main content
+          </a>
+          <PrototypeBanner />
+          <SiteHeader />
+          <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
+            {children}
+          </main>
+          <SiteFooter />
+        </SmoothScroll>
       </body>
     </html>
   );

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useLenis } from "lenis/react";
 import { MenuIcon } from "lucide-react";
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,14 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const items = [...primaryNav, { label: "Contact", href: "/contact" }];
+  const lenis = useLenis();
+
+  // Radix locks <body>, but Lenis scrolls the window directly, so it must pause too.
+  useEffect(() => {
+    if (!lenis) return;
+    if (open) lenis.stop();
+    else lenis.start();
+  }, [open, lenis]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -25,6 +34,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent
         id="mobile-menu"
+        data-lenis-prevent
         side="right"
         className="w-full gap-0 border-l-0 bg-paper p-0 sm:max-w-md"
       >

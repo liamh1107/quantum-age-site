@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { CtaBand, TextLink } from "@/components/site/blocks";
 import { ArticleFeature } from "@/components/site/article-item";
+import { ReadingProgress } from "@/components/motion/scroll-linked";
 import { formatDate, getAllArticles, getArticle, getRelatedArticles } from "@/lib/insights";
 
 export function generateStaticParams() {
@@ -108,7 +109,8 @@ export default async function ArticlePage({ params }: PageProps<"/insights/[slug
                 className="mb-12 h-auto w-full rounded-sm bg-stone"
               />
             )}
-            <div className="prose-article" dangerouslySetInnerHTML={{ __html: article.body }} />
+            <div id="article-body" className="prose-article" dangerouslySetInnerHTML={{ __html: article.body }} />
+            <ReadingProgress targetId="article-body" />
           </div>
           <aside className="lg:col-span-3 lg:col-start-10" aria-label="About this article">
             <div className="border-t-4 border-green pt-5 lg:sticky lg:top-[calc(var(--header-h)+2rem)]">

@@ -109,11 +109,6 @@
     scroll-padding-top: calc(var(--header-h) + 1.5rem);
     -webkit-text-size-adjust: 100%;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
   body {
     @apply bg-background text-foreground;
     font-size: 1.0625rem;
@@ -322,6 +317,22 @@
     }
   }
 }
+/*
+ * Formula diagram: the four circles start apart and settle into the logo's overlap as the diagram
+ * scrolls into view (`--converge` is set by <Converge>; unset means settled).
+ */
+.formula-part {
+  transform: translate(
+    calc((1 - var(--converge, 1)) * var(--dx) * 30px),
+    calc((1 - var(--converge, 1)) * var(--dy) * 30px)
+  );
+}
+.formula-core {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(calc(0.88 + 0.12 * var(--converge, 1)));
+}
+
 @keyframes reveal-rise {
   from {
     opacity: 0;

@@ -66,7 +66,7 @@ export default function PrototypeNotesPage() {
         </div>
       </section>
 
-      <section id="held-content" className="section-sm scroll-mt-24 border-t border-stone bg-[#efebe4]" aria-labelledby="held-heading">
+      <section id="held-content" className="section-sm border-t border-stone bg-[#efebe4]" aria-labelledby="held-heading">
         <div className="container-page grid gap-10 lg:grid-cols-12">
           <SectionHeading
             id="held-heading"
@@ -85,7 +85,7 @@ export default function PrototypeNotesPage() {
         </div>
       </section>
 
-      <section id="questions" className="section-sm scroll-mt-24 border-t border-stone" aria-labelledby="questions-heading">
+      <section id="questions" className="section-sm border-t border-stone" aria-labelledby="questions-heading">
         <div className="container-page grid gap-10 lg:grid-cols-12">
           <SectionHeading id="questions-heading" eyebrow="For Quantum Age" title="Questions we need answered" className="lg:col-span-5" />
           <ol className="list-decimal space-y-4 pl-6 text-ink marker:font-serif marker:text-plum lg:col-span-7">
