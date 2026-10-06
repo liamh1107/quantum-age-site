@@ -58,7 +58,8 @@ export default function ReferencesPage() {
             {clientGroups.map((g, i) => (
               <li
                 key={g.name}
-                className={`border-b border-stone py-8 md:border-b-0 md:px-8 md:first:pl-0 ${i > 0 ? "md:border-l" : ""}`}
+                className={`reveal border-b border-stone py-8 md:border-b-0 md:px-8 md:first:pl-0 ${i > 0 ? "md:border-l" : ""}`}
+                style={{ "--i": i } as React.CSSProperties}
               >
                 <h3 className="text-h3">{g.name}</h3>
                 <p className="mt-3 text-muted-foreground">{g.description}</p>

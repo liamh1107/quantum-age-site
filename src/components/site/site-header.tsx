@@ -23,7 +23,7 @@ export function PrototypeBanner() {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-stone bg-paper">
+    <header className="site-header sticky top-0 z-40 border-b border-stone bg-paper">
       <div className="container-page flex h-[var(--header-h)] items-center justify-between gap-6">
         <Logo priority />
         <nav aria-label="Primary" className="hidden lg:block">

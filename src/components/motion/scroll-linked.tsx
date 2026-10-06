@@ -6,13 +6,12 @@ import { useLenis } from "lenis/react";
 import { cn } from "@/lib/utils";
 
 const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
-const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
 /**
  * Runs `update` on every Lenis frame, once on mount and on resize. Updates write styles
  * directly so scrolling never re-renders React.
  */
-function useScrollFrame(update: (lenis: Lenis) => void) {
+export function useScrollFrame(update: (lenis: Lenis) => void) {
   const lenis = useLenis(update, [update]);
   useEffect(() => {
     if (!lenis) return;
@@ -23,8 +22,21 @@ function useScrollFrame(update: (lenis: Lenis) => void) {
   }, [lenis, update]);
 }
 
-/** Moves its content at a fraction of the scroll speed while it is near the top of the page. */
-export function Parallax({ speed = 0.12, className, children }: { speed?: number; className?: string; children: React.ReactNode }) {
+/**
+ * Moves its content at a fraction of the scroll speed while it is near the top of the page,
+ * optionally turning it by `rotate` degrees per 100px scrolled.
+ */
+export function Parallax({
+  speed = 0.12,
+  rotate = 0,
+  className,
+  children,
+}: {
+  speed?: number;
+  rotate?: number;
+  className?: string;
+  children: React.ReactNode;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const update = useCallback(
     (lenis: Lenis) => {
@@ -35,39 +47,14 @@ export function Parallax({ speed = 0.12, className, children }: { speed?: number
         return;
       }
       const y = Math.min(lenis.animatedScroll, window.innerHeight * 1.2);
-      el.style.transform = `translate3d(0, ${(y * speed).toFixed(1)}px, 0)`;
+      const turn = rotate ? ` rotate(${((y / 100) * rotate).toFixed(2)}deg)` : "";
+      el.style.transform = `translate3d(0, ${(y * speed).toFixed(1)}px, 0)${turn}`;
     },
-    [speed]
+    [speed, rotate]
   );
   useScrollFrame(update);
   return (
     <div ref={ref} className={cn("will-change-transform", className)}>
-      {children}
-    </div>
-  );
-}
-
-/**
- * Exposes `--converge` (0 → 1) as the element scrolls into view, finishing once it is fully visible.
- * Without JavaScript or with reduced motion the variable is unset, which CSS treats as 1 (settled).
- */
-export function Converge({ className, children }: { className?: string; children: React.ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const update = useCallback((lenis: Lenis) => {
-    const el = ref.current;
-    if (!el) return;
-    if (lenis.prefersReducedMotion) {
-      el.style.removeProperty("--converge");
-      return;
-    }
-    const rect = el.getBoundingClientRect();
-    const vh = window.innerHeight;
-    const p = clamp01((vh - rect.top) / (rect.height * 0.9 + vh * 0.15));
-    el.style.setProperty("--converge", easeOutCubic(p).toFixed(3));
-  }, []);
-  useScrollFrame(update);
-  return (
-    <div ref={ref} className={className}>
       {children}
     </div>
   );

@@ -5,13 +5,15 @@ export function TestimonialQuote({
   testimonial,
   size = "md",
   className,
+  style,
 }: {
   testimonial: Testimonial;
   size?: "md" | "lg";
   className?: string;
+  style?: React.CSSProperties;
 }) {
   return (
-    <figure className={cn("flex flex-col", className)}>
+    <figure className={cn("flex flex-col", className)} style={style}>
       <span aria-hidden="true" className="font-serif text-6xl leading-none text-green">
         “
       </span>

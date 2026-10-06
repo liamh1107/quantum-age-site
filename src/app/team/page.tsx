@@ -34,9 +34,9 @@ export default function TeamPage() {
 
       <section className="section-sm" aria-label="Team members">
         <ul className="container-page grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {people.map((p) => (
+          {people.map((p, i) => (
             <li key={p.slug} id={p.slug}>
-              <article aria-labelledby={`${p.slug}-name`}>
+              <article aria-labelledby={`${p.slug}-name`} className="reveal" style={{ "--i": i % 3 } as React.CSSProperties}>
                 <Portrait src={p.image} name={p.name} className="max-w-[300px]" />
                 <div className="mt-6 border-t border-stone pt-5">
                   <h2 id={`${p.slug}-name`} className="text-h3">

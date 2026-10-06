@@ -1,9 +1,11 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Rings, FormulaDiagram } from "@/components/brand/rings";
+import { Rings } from "@/components/brand/rings";
 import { CtaBand, SectionHeading, TextLink } from "@/components/site/blocks";
-import { Converge, Parallax } from "@/components/motion/scroll-linked";
+import { Parallax } from "@/components/motion/scroll-linked";
+import { FormulaStory } from "@/components/site/formula-story";
 import { TestimonialQuote } from "@/components/site/testimonial";
 import { Portrait } from "@/components/site/portrait";
 import { ArticleFeature } from "@/components/site/article-item";
@@ -18,6 +20,8 @@ export default function HomePage() {
   const featured = getFeaturedArticles();
   const archive = getArchiveRange();
   const [lead, ...more] = testimonials;
+  const taglineLines = site.tagline.split(/(?<=\.)\s+/);
+  const stagger = (i: number, step?: string) => ({ "--i": i, ...(step && { "--step": step }) }) as React.CSSProperties;
 
   return (
     <>
@@ -25,12 +29,21 @@ export default function HomePage() {
       <section aria-labelledby="home-title" className="relative overflow-hidden border-b border-stone">
         <div className="container-page grid items-center gap-8 pt-12 pb-14 md:pt-20 md:pb-20 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <p className="eyebrow mb-6 text-plum">{site.descriptor}</p>
+            <p className="intro eyebrow mb-6 text-plum">{site.descriptor}</p>
             <h1 id="home-title" className="text-display max-w-[13ch]">
-              {site.tagline}
+              {taglineLines.map((line, i) => (
+                <Fragment key={line}>
+                  {i > 0 && " "}
+                  <span className="intro block" style={{ "--d": i + 1 } as React.CSSProperties}>
+                    {line}
+                  </span>
+                </Fragment>
+              ))}
             </h1>
-            <p className="text-lead mt-7 max-w-[44ch] text-ink/80">{site.positioning}</p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <p className="intro text-lead mt-7 max-w-[44ch] text-ink/80" style={{ "--d": 3 } as React.CSSProperties}>
+              {site.positioning}
+            </p>
+            <div className="intro mt-9 flex flex-wrap gap-3" style={{ "--d": 4 } as React.CSSProperties}>
               <Button asChild size="lg">
                 <Link href="/contact">
                   Start a conversation
@@ -43,8 +56,8 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative mx-auto hidden w-full max-w-[460px] sm:block lg:col-span-5">
-            <Parallax speed={0.14}>
-              <Rings className="w-full" />
+            <Parallax speed={0.14} rotate={1.2}>
+              <Rings intro className="w-full" />
             </Parallax>
           </div>
         </div>
@@ -75,7 +88,7 @@ export default function HomePage() {
           </div>
           <ul className="grid gap-8 border-t border-stone pt-10 sm:grid-cols-3 lg:col-span-12">
             {benefits.map((b, i) => (
-              <li key={b.title} className="reveal">
+              <li key={b.title} className="reveal" style={stagger(i)}>
                 <span className="font-serif text-lg text-green-800" aria-hidden="true">
                   0{i + 1}
                 </span>
@@ -104,20 +117,23 @@ export default function HomePage() {
           </div>
           <ol className="mt-12 grid md:grid-cols-2 md:gap-x-12">
             {solutions.map((s, i) => (
-              <li key={s.id} className="border-t border-ink/15">
+              <li key={s.id} className="reveal border-t border-ink/15" style={stagger(i % 2)}>
                 <Link
                   href={`/solutions#${s.id}`}
-                  className="group grid grid-cols-[2.5rem_1fr_auto] items-start gap-4 py-6 hover:bg-white/40 focus-visible:bg-white/40 sm:px-2"
+                  className="group relative grid grid-cols-[2.5rem_1fr_auto] items-start gap-4 py-6 before:absolute before:inset-x-0 before:-top-px before:h-0.5 before:origin-left before:scale-x-0 before:bg-plum before:transition-transform before:duration-500 before:ease-[cubic-bezier(0.16,1,0.3,1)] hover:before:scale-x-100 focus-visible:before:scale-x-100 sm:px-2"
                 >
-                  <span className="pt-1 font-serif text-lg text-plum" aria-hidden="true">
+                  <span
+                    className="pt-1 font-serif text-lg text-plum transition-colors duration-300 group-hover:text-green-800"
+                    aria-hidden="true"
+                  >
                     0{i + 1}
                   </span>
-                  <span>
-                    <span className="text-h3 block group-hover:text-plum">{s.name}</span>
+                  <span className="transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1">
+                    <span className="text-h3 block transition-colors duration-300 group-hover:text-plum">{s.name}</span>
                     <span className="mt-1 block text-muted-foreground">{s.summary}</span>
                   </span>
                   <ArrowRightIcon
-                    className="mt-2 size-5 text-plum transition-transform duration-150 group-hover:translate-x-1"
+                    className="mt-2 size-5 text-plum transition-transform duration-300 group-hover:translate-x-1.5"
                     aria-hidden="true"
                   />
                 </Link>
@@ -128,50 +144,10 @@ export default function HomePage() {
       </section>
 
       {/* Collaborative formula */}
-      <section className="section" aria-labelledby="formula-heading">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-12">
-          <Converge className="order-2 mx-auto w-full max-w-[420px] lg:order-1 lg:col-span-5">
-            <FormulaDiagram
-              labels={formula.parts.map((p) => p.term) as [string, string, string, string]}
-              result={formula.result.term}
-              className="w-full overflow-visible"
-            />
-          </Converge>
-          <div className="order-1 lg:order-2 lg:col-span-6 lg:col-start-7">
-            <SectionHeading id="formula-heading" eyebrow={formula.title} title={formula.subtitle} />
-            <ol className="mt-8 border-b border-stone">
-              {formula.parts.map((p, i) => (
-                <li key={p.term} className="flex items-baseline justify-between gap-4 border-t border-stone py-3">
-                  <span className="font-serif text-xl text-ink">
-                    {i > 0 && (
-                      <span className="mr-2 text-green-800" aria-hidden="true">
-                        +
-                      </span>
-                    )}
-                    {p.term}
-                  </span>
-                  <span className="text-right text-muted-foreground">{p.detail}</span>
-                </li>
-              ))}
-              <li className="flex items-baseline justify-between gap-4 border-t-2 border-ink py-3">
-                <span className="font-serif text-xl font-semibold text-plum">
-                  <span className="mr-2" aria-hidden="true">
-                    =
-                  </span>
-                  {formula.result.term}
-                </span>
-                <span className="text-right font-medium text-ink">{formula.result.detail}</span>
-              </li>
-            </ol>
-            <TextLink href="/approach" className="mt-6">
-              How we work with clients
-            </TextLink>
-          </div>
-        </div>
-      </section>
+      <FormulaStory eyebrow={formula.title} title={formula.subtitle} parts={formula.parts} result={formula.result} />
 
       {/* People */}
-      <section className="section border-t border-stone" aria-labelledby="people-heading">
+      <section className="section" aria-labelledby="people-heading">
         <div className="container-page">
           <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
             <SectionHeading
@@ -186,8 +162,8 @@ export default function HomePage() {
             </div>
           </div>
           <ul className="mt-12 grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-5 lg:grid-cols-9">
-            {people.map((p) => (
-              <li key={p.slug} className="text-center">
+            {people.map((p, i) => (
+              <li key={p.slug} className="reveal text-center" style={stagger(i, "6%")}>
                 <Link href={`/team#${p.slug}`} className="group block">
                   <Portrait src={p.image} name={p.name} decorative sizes="(min-width: 1024px) 10vw, 28vw" />
                   <span className="mt-3 block text-sm font-semibold text-ink group-hover:text-plum group-hover:underline">
@@ -205,10 +181,10 @@ export default function HomePage() {
         <div className="container-page">
           <SectionHeading id="clients-heading" eyebrow="References" title="What our clients say" />
           <div className="mt-12 grid gap-12 lg:grid-cols-12">
-            <TestimonialQuote testimonial={lead} size="lg" className="lg:col-span-7" />
+            <TestimonialQuote testimonial={lead} size="lg" className="reveal lg:col-span-7" />
             <div className="grid gap-12 lg:col-span-5">
-              {more.map((t) => (
-                <TestimonialQuote key={t.name} testimonial={t} />
+              {more.map((t, i) => (
+                <TestimonialQuote key={t.name} testimonial={t} className="reveal" style={stagger(i + 1)} />
               ))}
             </div>
           </div>
@@ -234,8 +210,10 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
-            {featured.map((a) => (
-              <ArticleFeature key={a.slug} article={a} />
+            {featured.map((a, i) => (
+              <div key={a.slug} className="reveal" style={stagger(i)}>
+                <ArticleFeature article={a} />
+              </div>
             ))}
           </div>
         </div>

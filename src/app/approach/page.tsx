@@ -46,13 +46,15 @@ export default function ApproachPage() {
               const isResult = i === formula.parts.length;
               return (
                 <li key={p.term} className={cn("relative bg-plum-900 p-6 lg:p-7", isResult && "bg-green text-ink")}>
-                  <span className={cn("block font-serif text-3xl", isResult ? "text-ink" : "text-white")}>
-                    <span className={cn("mr-2", isResult ? "text-ink" : "text-green")} aria-hidden="true">
-                      {i === 0 ? "" : isResult ? "=" : "+"}
+                  <div className="reveal" style={{ "--i": i, "--step": "8%" } as React.CSSProperties}>
+                    <span className={cn("block font-serif text-3xl", isResult ? "text-ink" : "text-white")}>
+                      <span className={cn("mr-2", isResult ? "text-ink" : "text-green")} aria-hidden="true">
+                        {i === 0 ? "" : isResult ? "=" : "+"}
+                      </span>
+                      {p.term}
                     </span>
-                    {p.term}
-                  </span>
-                  <span className={cn("mt-2 block", isResult ? "font-semibold text-ink" : "text-white/75")}>{p.detail}</span>
+                    <span className={cn("mt-2 block", isResult ? "font-semibold text-ink" : "text-white/75")}>{p.detail}</span>
+                  </div>
                 </li>
               );
             })}
@@ -64,10 +66,11 @@ export default function ApproachPage() {
       <section className="section" aria-labelledby="framework-heading">
         <div className="container-page">
           <SectionHeading id="framework-heading" eyebrow="Engagement model" title={approach.frameworkTitle} lead={approach.frameworkLead} />
-          <ol className="mt-14 grid gap-6 lg:grid-cols-3 lg:items-end lg:gap-8">
+          <ol className="reveal-group mt-14 grid gap-6 lg:grid-cols-3 lg:items-end lg:gap-8">
             {approach.levels.map((l, i) => (
               <li
                 key={l.number}
+                style={{ "--i": i, "--rise": "56px", "--step": "14%" } as React.CSSProperties}
                 className={cn(
                   "reveal flex flex-col border-t-4 bg-surface p-7 shadow-[0_1px_0_var(--stone)] md:p-8",
                   i === 0 && "border-stone lg:min-h-[19rem]",

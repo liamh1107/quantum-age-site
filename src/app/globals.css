@@ -307,41 +307,360 @@
   }
 }
 
-/* Section introductions: CSS scroll-driven, progressive, and skipped for reduced motion. */
+/*
+ * Section introductions: CSS scroll-driven, progressive, and skipped for reduced motion.
+ * `--i` staggers items that enter together (a row of cards); `--rise` sets the travel.
+ */
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
     .reveal {
       animation: reveal-rise linear both;
       animation-timeline: view();
-      animation-range: entry 0% entry 40%;
+      animation-range: entry calc(var(--i, 0) * var(--step, 10%)) entry calc(40% + var(--i, 0) * var(--step, 10%));
+    }
+    /* Items of different heights that should still rise in order share their list's timeline. */
+    .reveal-group {
+      view-timeline-name: --reveal-group;
+    }
+    .reveal-group > .reveal {
+      animation-timeline: --reveal-group;
     }
   }
 }
-/*
- * Formula diagram: the four circles start apart and settle into the logo's overlap as the diagram
- * scrolls into view (`--converge` is set by <Converge>; unset means settled).
- */
-.formula-part {
-  transform: translate(
-    calc((1 - var(--converge, 1)) * var(--dx) * 30px),
-    calc((1 - var(--converge, 1)) * var(--dy) * 30px)
-  );
-}
-.formula-core {
-  transform-box: fill-box;
-  transform-origin: center;
-  transform: scale(calc(0.88 + 0.12 * var(--converge, 1)));
-}
-
 @keyframes reveal-rise {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    translate: 0 var(--rise, 16px);
   }
   to {
     opacity: 1;
-    transform: none;
+    translate: 0 0;
   }
+}
+
+/* Home hero: a single load sequence. Copy rises in order while the rings draw and the core settles. */
+@media (prefers-reduced-motion: no-preference) {
+  .intro {
+    animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--d, 0) * 90ms + 60ms);
+  }
+  .rings-intro circle {
+    stroke-dasharray: 1 1;
+    transform-box: fill-box;
+    transform-origin: center;
+    rotate: calc(var(--i, 0) * 90deg - 90deg);
+    animation: ring-draw 1.5s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-delay: calc(var(--i, 0) * 110ms + 120ms);
+  }
+  .rings-intro .ring-green {
+    animation-delay: calc(var(--i, 0) * 110ms + 380ms);
+  }
+  .rings-intro rect {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ring-core 0.8s cubic-bezier(0.34, 1.4, 0.5, 1) 1.05s both;
+  }
+}
+@keyframes intro-rise {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes ring-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ring-core {
+  from {
+    opacity: 0;
+    scale: 0.2;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Header: lifts off the page once content scrolls beneath it (`data-scrolled` is set by <ScrollState>). */
+.site-header {
+  transition: box-shadow 0.3s ease;
+}
+html[data-scrolled] .site-header {
+  box-shadow: 0 10px 30px -22px rgb(35 26 37 / 0.45);
+}
+
+/*
+ * Formula map (<FormulaStory>). `--n0`…`--n4` (0 → 1) are written per scroll frame for the four terms
+ * and the result; each element reads its own as `--p`. Unset variables fall back to 1 (finished),
+ * which is what renders without JavaScript or with reduced motion.
+ */
+.fm-diagram {
+  max-width: 34rem;
+  container-type: inline-size;
+}
+@media (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
+  .fm-track {
+    height: 250vh;
+  }
+  .fm-stage {
+    position: sticky;
+    top: var(--header-h);
+    height: calc(100svh - var(--header-h));
+    padding-block: 2.5rem;
+  }
+  .fm-diagram {
+    max-width: min(100%, calc(100svh - var(--header-h) - 6rem));
+  }
+}
+.fm [data-part] {
+  transition: opacity 0.35s ease;
+}
+.fm-dial {
+  transform-origin: 300px 300px;
+  rotate: var(--dial, 0deg);
+}
+.fm-tick {
+  stroke: rgb(255 255 255 / 0.14);
+  stroke-width: 1;
+}
+.fm-tick-major {
+  stroke: rgb(141 198 63 / 0.7);
+  stroke-width: 1.5;
+}
+.fm-inner {
+  fill: none;
+  stroke: rgb(255 255 255 / 0.1);
+  stroke-dasharray: 2 7;
+}
+.fm-ghost {
+  fill: none;
+  stroke: rgb(255 255 255 / 0.08);
+}
+.fm-line {
+  fill: none;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease, opacity 0.35s ease;
+}
+.fm-draw {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: calc(1 - var(--p, 1));
+}
+.fm-arc {
+  stroke: rgb(255 255 255 / 0.5);
+  stroke-width: 1.25;
+}
+.fm-spoke {
+  stroke: rgb(141 198 63 / 0.8);
+  stroke-width: 1.5;
+}
+.fm-flow {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-dasharray: 0.04 0.96;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.fm-node,
+.fm-core {
+  position: absolute;
+  translate: -50% -50%;
+  border-radius: 999px;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+.fm-node {
+  width: 9.4%;
+  aspect-ratio: 1;
+}
+/* Upcoming terms stay legible (≥ 55% white keeps 4.5:1 on plum-900); their details appear as they join. */
+.fm-node-body {
+  position: absolute;
+  inset: 0;
+  scale: calc(0.82 + 0.18 * var(--p, 1));
+}
+.fm-node-ring,
+.fm-term {
+  opacity: calc(0.55 + 0.45 * var(--p, 1));
+}
+.fm-node-ring {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in oklab, var(--green) calc(var(--p, 1) * 100%), rgb(255 255 255 / 0.3));
+  background: var(--plum-900);
+  font-family: var(--font-serif);
+  font-size: clamp(0.6875rem, 2.4cqi, 0.9375rem);
+  transition: scale 0.4s cubic-bezier(0.34, 1.4, 0.5, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.fm-node:hover .fm-node-ring,
+.fm-node:focus-visible .fm-node-ring,
+.fm-node[aria-pressed="true"] .fm-node-ring {
+  scale: 1.14;
+  background: color-mix(in oklab, var(--green) 22%, var(--plum-900));
+  box-shadow: 0 0 0 0.45rem rgb(141 198 63 / 0.12);
+}
+.fm-label {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  background: var(--plum-900);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.25;
+  pointer-events: none;
+}
+.fm-term {
+  font-family: var(--font-serif);
+  font-size: clamp(0.9375rem, 3.6cqi, 1.3125rem);
+}
+.fm-detail {
+  display: none;
+  font-size: clamp(0.75rem, 2.3cqi, 0.875rem);
+  color: rgb(255 255 255 / 0.72);
+  opacity: var(--p, 1);
+}
+@container (min-width: 26rem) {
+  .fm-detail {
+    display: block;
+  }
+}
+
+.fm-core {
+  left: 50%;
+  top: 50%;
+  width: 22%;
+  aspect-ratio: 1;
+  border-radius: 16%;
+  display: grid;
+  place-items: center;
+  scale: calc(0.86 + 0.14 * var(--p, 1));
+  border: 1px solid rgb(255 255 255 / 0.22);
+  color: color-mix(in oklab, var(--ink) calc(var(--p, 1) * 100%), rgb(255 255 255 / 0.6));
+  transition: box-shadow 0.8s ease;
+}
+.fm-core-fill {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: var(--green);
+  opacity: var(--p, 1);
+}
+.fm-core-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+  transition: scale 0.4s cubic-bezier(0.34, 1.4, 0.5, 1);
+}
+.fm-core-term {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(0.9375rem, 3.9cqi, 1.5rem);
+}
+.fm-core-detail {
+  display: none;
+  margin-top: 0.2em;
+  font-size: clamp(0.6875rem, 2.1cqi, 0.8125rem);
+  font-weight: 600;
+  max-width: 9ch;
+  white-space: normal;
+}
+@container (min-width: 26rem) {
+  .fm-core-detail {
+    display: block;
+  }
+}
+.fm-core:hover .fm-core-text,
+.fm-core:focus-visible .fm-core-text,
+.fm-core[aria-pressed="true"] .fm-core-text {
+  scale: 1.06;
+}
+.fm[data-complete] .fm-core {
+  box-shadow: 0 0 0 0.6rem rgb(141 198 63 / 0.12);
+}
+.fm-halo {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--green);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fm-row > * {
+  transition: color 0.5s ease, opacity 0.5s ease;
+}
+/* The list is the text equivalent of the map, so upcoming rows dim but never disappear. */
+.fm-row[data-pending] :is(.fm-row-term, .fm-row-detail) {
+  color: rgb(255 255 255 / 0.55);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fm[data-complete] .fm-flow {
+    opacity: 1;
+    animation: fm-flow 2.4s linear infinite;
+    animation-delay: calc(var(--i, 0) * -0.6s);
+  }
+  .fm[data-complete] .fm-halo {
+    animation: fm-halo 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .fm:not([data-inview]) .fm-flow {
+    animation-play-state: paused;
+  }
+}
+@keyframes fm-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1;
+  }
+}
+@keyframes fm-halo {
+  from {
+    opacity: 0.8;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 1.9;
+  }
+}
+
+/* Focus mode: hovering, tabbing to or tapping a term dims what it is not connected to. */
+.fm[data-focus="0"] [data-part]:not([data-part~="0"]),
+.fm[data-focus="1"] [data-part]:not([data-part~="1"]),
+.fm[data-focus="2"] [data-part]:not([data-part~="2"]),
+.fm[data-focus="3"] [data-part]:not([data-part~="3"]),
+.fm[data-focus="4"] [data-part]:not([data-part~="4"]) {
+  opacity: 0.2;
+}
+.fm[data-focus="0"] :is(.fm-arc[data-part~="0"], [data-part~="0"] > .fm-spoke),
+.fm[data-focus="1"] :is(.fm-arc[data-part~="1"], [data-part~="1"] > .fm-spoke),
+.fm[data-focus="2"] :is(.fm-arc[data-part~="2"], [data-part~="2"] > .fm-spoke),
+.fm[data-focus="3"] :is(.fm-arc[data-part~="3"], [data-part~="3"] > .fm-spoke),
+.fm[data-focus="4"] [data-part~="4"] > .fm-spoke {
+  stroke: var(--green);
+  stroke-width: 2.75;
 }
 
 @media (prefers-reduced-motion: reduce) {

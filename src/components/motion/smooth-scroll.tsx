@@ -62,6 +62,17 @@ function AnchorLinks() {
   return null;
 }
 
+/** Marks `<html data-scrolled>` once the page has left the top, for the header's lifted state. */
+function ScrollState() {
+  const lenis = useLenis((l) => {
+    document.documentElement.toggleAttribute("data-scrolled", l.scroll > 8);
+  });
+  useEffect(() => {
+    document.documentElement.toggleAttribute("data-scrolled", window.scrollY > 8);
+  }, [lenis]);
+  return null;
+}
+
 const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
 
 function subscribeReducedMotion(onChange: () => void) {
@@ -96,6 +107,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
   return (
     <ReactLenis root options={options}>
       <AnchorLinks />
+      <ScrollState />
       {children}
     </ReactLenis>
   );
