@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Windows launcher downloads (caddy.exe, generated Caddyfile)
+/tools/

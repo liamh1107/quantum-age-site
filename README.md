@@ -62,6 +62,23 @@ npm run check
 | `npm run lint` | ESLint (Next.js core web vitals + TypeScript rules) |
 | `npm run check` | Typecheck, lint and build |
 
+## Hosting from a Windows PC (optional)
+
+`start-site.bat` builds the site and serves it over HTTPS through [Caddy](https://caddyserver.com) at `https://testsite.4eos.com`, on the local network, and at `https://localhost`. Double-click it, or right-click and choose **Run as administrator** so it can open ports 80 and 443 in Windows Firewall.
+
+On each run it:
+
+1. Checks for Node.js 20.9+ and runs `npm ci` if dependencies are missing.
+2. Stops if port 4317 is already in use (for example, an earlier run is still open).
+3. Finds Caddy, or downloads it into `tools\` (ignored by git).
+4. Writes `tools\Caddyfile`, which proxies the domain and local addresses to `127.0.0.1:4317`.
+5. Opens Caddy and a PowerShell window that builds with `NEXT_PUBLIC_SITE_URL=https://testsite.4eos.com` and starts the production server.
+6. Opens firewall ports 80 and 443 and asks the router (UPnP) to forward them to this PC.
+
+The domain's DNS must point at the network's public IP, and the router must forward external ports 80 and 443 to this PC (not to 4317). To use a different domain, change `$publicHost` at the top of `start-site.ps1`.
+
+Anyone with the address can see the site while it runs, so stop both windows when the review is over.
+
 ## Environment variables
 
 None are required. One is optional:
