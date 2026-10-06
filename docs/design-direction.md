@@ -90,12 +90,19 @@ CSS only — no animation library is installed, because the site needs very litt
 - **Hover/focus feedback:** 150ms color and underline transitions on links and buttons.
 - **Section introductions:** a short (≈400ms) fade/rise on section headings using scroll-driven CSS (`animation-timeline: view()`), applied only when supported and only under `prefers-reduced-motion: no-preference`. Content is fully visible without it; nothing waits on JavaScript.
 - **Mobile menu:** sheet slides in (Radix + tw-animate-css), disabled under reduced motion.
-- **Accordion / expand-collapse:** height animation from Radix, disabled under reduced motion.
 - **Not used:** parallax, scroll hijacking, background motion, counters that animate numbers, page transitions.
 
 ## Components (shadcn/ui, restyled)
 
-Radix-based shadcn/ui primitives are the accessible foundation: Sheet (mobile nav), Accordion (Approach details on mobile), Button, Input, Textarea, Label, Select, Separator, Breadcrumb, Alert (prototype notices), Sonner toasts are **not** used for form results (inline states are more accessible). All are restyled through tokens: square-ish corners, plum focus rings, Figtree labels.
+Radix-based shadcn/ui primitives are the accessible foundation where they earn their place: Sheet (mobile navigation, with focus trapping and Escape to close), Button, Input, Textarea, Label and Breadcrumb. All are restyled through tokens: 2px corners, plum focus rings, Figtree labels.
+
+Deliberately not used:
+
+- **Accordion** — the three Approach levels are short enough to show in full on every screen size; hiding them behind toggles would add clicks without saving meaningful space.
+- **Select** — the "What would you like to discuss?" field is a native `<select>`, which gives the best mobile picker and screen-reader behavior for seven options.
+- **Alert** — prototype and verification notices use a small project `Notice` block (icon + text, never color alone) so they read as editorial asides rather than system errors.
+- **Toasts** — form results are inline and receive focus, which is more accessible than a transient toast.
+- **Tabs, Tooltip** — no content needed them.
 
 ## Interaction patterns considered (21st.dev was unavailable)
 

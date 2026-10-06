@@ -28,12 +28,12 @@ export default function SolutionsPage() {
       />
 
       <div className="container-page grid gap-10 lg:grid-cols-12 lg:gap-12">
-        <aside className="sticky top-[var(--header-h)] z-10 -mx-[var(--gutter)] border-b border-stone bg-paper px-[var(--gutter)] lg:top-[calc(var(--header-h)+2rem)] lg:col-span-3 lg:mx-0 lg:self-start lg:border-b-0 lg:bg-transparent lg:px-0 lg:pt-16">
+        <aside className="sticky top-[var(--header-h)] min-w-0 z-10 -mx-[var(--gutter)] border-b border-stone bg-paper px-[var(--gutter)] lg:top-[calc(var(--header-h)+2rem)] lg:col-span-3 lg:mx-0 lg:self-start lg:border-b-0 lg:bg-transparent lg:px-0 lg:pt-16">
           <p className="eyebrow mb-3 hidden text-muted-foreground lg:block">On this page</p>
           <SectionIndex label="Solutions on this page" items={solutions.map((s) => ({ id: s.id, label: s.name }))} />
         </aside>
 
-        <div className="lg:col-span-9">
+        <div className="min-w-0 lg:col-span-9">
           {solutions.map((s, i) => {
             const related = getArticlesByTags(solutionTags[s.id] ?? [], 2);
             return (

@@ -49,7 +49,7 @@ export function InsightsBrowser({
   return (
     <div>
       <div className="grid gap-6 border-y border-stone py-6 lg:grid-cols-12 lg:items-start">
-        <div className="lg:col-span-4">
+        <div className="min-w-0 lg:col-span-4">
           <Label htmlFor={searchId} className="text-[0.9375rem] font-semibold text-ink">
             Search insights
           </Label>
@@ -71,7 +71,7 @@ export function InsightsBrowser({
             Searches titles, summaries and topics.
           </p>
         </div>
-        <fieldset className="lg:col-span-8">
+        <fieldset className="min-w-0 lg:col-span-8">
           <legend className="text-[0.9375rem] font-semibold text-ink">Filter by topic</legend>
           <div className="-mx-1 mt-2 flex gap-2 overflow-x-auto px-1 pb-1 lg:flex-wrap lg:overflow-visible">
             <TagButton active={tag === null} onClick={() => { setTag(null); setVisible(PAGE_SIZE); }}>

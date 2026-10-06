@@ -28,43 +28,43 @@ export default function ContactPage() {
           <div className="lg:col-span-4">
             <h2 className="text-h3">Talk to us directly</h2>
             <dl className="mt-6 border-t border-stone">
-              <div className="flex gap-4 border-b border-stone py-5">
-                <PhoneIcon className="mt-1 size-5 shrink-0 text-plum" aria-hidden="true" />
-                <div>
-                  <dt className="eyebrow text-muted-foreground">Phone</dt>
-                  <dd className="mt-1">
-                    <a href={contact.phoneHref} className="text-lg font-semibold text-ink hover:text-plum hover:underline">
-                      {contact.phoneDisplay}
-                    </a>
-                  </dd>
-                </div>
+              <div className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-4 border-b border-stone py-5">
+                <dt className="eyebrow col-span-2 flex items-center gap-4 text-muted-foreground">
+                  <PhoneIcon className="size-5 shrink-0 text-plum" aria-hidden="true" />
+                  Phone
+                </dt>
+                <dd className="col-start-2 mt-1">
+                  <a href={contact.phoneHref} className="text-lg font-semibold text-ink hover:text-plum hover:underline">
+                    {contact.phoneDisplay}
+                  </a>
+                </dd>
               </div>
-              <div className="flex gap-4 border-b border-stone py-5">
-                <MailIcon className="mt-1 size-5 shrink-0 text-plum" aria-hidden="true" />
-                <div className="min-w-0">
-                  <dt className="eyebrow text-muted-foreground">Email</dt>
-                  <dd className="mt-1">
-                    <a href={contact.emailHref} className="text-lg font-semibold [overflow-wrap:anywhere] text-ink hover:text-plum hover:underline">
-                      {contact.email}
-                    </a>
-                  </dd>
-                </div>
+              <div className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-4 border-b border-stone py-5">
+                <dt className="eyebrow col-span-2 flex items-center gap-4 text-muted-foreground">
+                  <MailIcon className="size-5 shrink-0 text-plum" aria-hidden="true" />
+                  Email
+                </dt>
+                <dd className="col-start-2 mt-1">
+                  <a href={contact.emailHref} className="text-lg font-semibold [overflow-wrap:anywhere] text-ink hover:text-plum hover:underline">
+                    {contact.email}
+                  </a>
+                </dd>
               </div>
-              <div className="flex gap-4 border-b border-stone py-5">
-                <MapPinIcon className="mt-1 size-5 shrink-0 text-plum" aria-hidden="true" />
-                <div>
-                  <dt className="eyebrow text-muted-foreground">Mailing address</dt>
-                  <dd className="mt-1 text-ink">
-                    <address className="not-italic">
-                      {contact.addressLines.map((l) => (
-                        <span key={l} className="block">
-                          {l}
-                        </span>
-                      ))}
-                    </address>
-                    <span className="mt-2 block text-muted-foreground">{contact.reach}</span>
-                  </dd>
-                </div>
+              <div className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-x-4 border-b border-stone py-5">
+                <dt className="eyebrow col-span-2 flex items-center gap-4 text-muted-foreground">
+                  <MapPinIcon className="size-5 shrink-0 text-plum" aria-hidden="true" />
+                  Mailing address
+                </dt>
+                <dd className="col-start-2 mt-1 text-ink">
+                  <address className="not-italic">
+                    {contact.addressLines.map((l) => (
+                      <span key={l} className="block">
+                        {l}
+                      </span>
+                    ))}
+                  </address>
+                  <span className="mt-2 block text-muted-foreground">{contact.reach}</span>
+                </dd>
               </div>
             </dl>
             <div className="mt-8">
