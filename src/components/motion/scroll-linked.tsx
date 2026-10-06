@@ -91,7 +91,8 @@ export function ReadingProgress({ targetId }: { targetId: string }) {
     <div
       ref={ref}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-[var(--header-h)] z-40 h-[3px] origin-left scale-x-0 bg-green"
+      style={{ transform: "scaleX(0)" }}
+      className="pointer-events-none fixed inset-x-0 top-[var(--header-h)] z-40 h-[3px] origin-left bg-green"
     />
   );
 }

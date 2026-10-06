@@ -17,8 +17,9 @@ These counts come from searching the source in `src/` after the second pass:
 | Drop shadows | 1 | The mobile navigation sheet, to separate it from the page (the Approach panels use a 1px hairline drawn with `box-shadow`, which reads as a rule, not a shadow) |
 | Pill or badge labels | 0 | Topic filters are square-cornered toggle buttons with counts |
 | Distinct icons | 12 | All functional (arrow, phone, mail, map pin, search, menu, alert, info, success, loading, breadcrumb chevron, breadcrumb overflow). No decorative feature icons |
-| Animated elements on the home page | 9 | Scroll-driven fade/rise on section headings; 0 with reduced motion |
-| Carousels, counters, parallax, auto-play | 0 | |
+| Animated elements on the home page | 9 + 2 | Scroll-driven fade/rise on section headings, plus the formula convergence and hero-ring depth added with Lenis; 0 with reduced motion |
+| Parallax layers | 1 | Home hero rings at 14% of scroll speed |
+| Carousels, counters, auto-play, scroll hijacking | 0 | |
 
 ## Pass 1: during design and assembly
 
@@ -71,6 +72,30 @@ No unsupported claims were found in authored copy during pass 2. Previously held
 ## Second visual pass after corrections
 
 After the changes above, every route was re-run through the automated audit (no console errors or warnings, no overflow at any tested width, no broken images, no axe WCAG 2.2 AA violations, all internal links resolving) and the changed pages were reviewed again at mobile and desktop widths. The Team jump list wraps to two columns on phones and does not push the first profile far below the fold; the Insights facts sit in one row on phones.
+
+## Motion review: Lenis smooth scrolling
+
+When Lenis smooth scrolling was added, the same checklist was applied to motion. Ideas considered and the decision for each:
+
+| Idea | Decision | Reason |
+| --- | --- | --- |
+| Formula circles converging as the diagram enters | **Kept** | It shows the company's own formula, You + Team + Market + Opportunity = Success, coming together. It explains rather than decorates, and it settles before the reader reaches it |
+| Reading progress on articles | **Kept** | Articles run up to 15 minutes; the line tells readers where they are |
+| Solutions strip following the current section on mobile | **Kept** | Fixes a usability gap: the current item could scroll out of sight |
+| Hero ring depth | **Kept, at 14% speed** | One quiet layer, only in the hero; nothing else on the site moves at a different speed |
+| Header that hides on scroll down | Rejected | The Solutions index and article sidebar are positioned against the header; a moving header would make them jump |
+| Text that reveals word by word, split headings, counters | Rejected | Delays reading; reads as template motion |
+| Pinned "scrollytelling" for the three Approach levels | Rejected | Hijacks scroll and hides content behind the gesture |
+| Smooth touch scrolling (`syncTouch`) | Rejected | Native touch momentum is already smooth and is what people expect on phones; emulating it costs battery and is unstable on older iOS |
+| Lenis built-in `anchors` | Replaced | It does not move keyboard focus. A custom handler scrolls smoothly *and* moves focus, so the skip link and in-page indexes stay accessible |
+
+Problems found while testing and fixed:
+
+- Clicking a link that had just been scrolled into view natively made Lenis start from a stale position, jumping back and stopping short. Fixed by syncing Lenis to the real position before each anchor jump.
+- Error-summary links put the field's input right under the header, hiding its label. They now scroll to the label and focus the input.
+- The reading-progress line stayed invisible because Tailwind's `scale-x-0` uses the separate CSS `scale` property, which multiplied with the inline transform. Fixed by setting the starting state through `transform`.
+- Under reduced motion, Lenis' own mode still eased the wheel over about 80ms. Wheel smoothing is now switched off entirely while the preference is on.
+- Team and prototype-notes targets had a scroll margin stacked on top of the page's scroll padding, leaving a large gap above them. The extra margin was removed.
 
 ## Remaining concerns
 

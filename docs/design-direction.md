@@ -85,12 +85,49 @@ Fallbacks: `ui-serif, Georgia, serif` and `ui-sans-serif, system-ui, sans-serif`
 
 ## Motion
 
-CSS only — no animation library is installed, because the site needs very little motion.
+Scrolling is the core motion. [Lenis](https://lenis.dev) (`lenis` 1.3, about 5 KB gzipped) smooths wheel and trackpad scrolling across every route, and a few scroll-linked details build on it. Everything else is CSS. No other animation library is installed.
+
+### Smooth scrolling (Lenis)
+
+| Setting | Value | Why |
+| --- | --- | --- |
+| Setup | `ReactLenis` with `root` in the root layout (`src/components/motion/smooth-scroll.tsx`), `autoRaf` | One instance for the whole document. Lenis wraps native scroll, so `position: sticky`, find-in-page, scroll restoration and assistive technology keep working |
+| `lerp` | `0.1` | Lenis' tuned default: responsive, with a short, soft settle |
+| `smoothWheel` | on; **off under reduced motion** | Lenis' own reduced-motion mode still damps over a few frames, so the browser's native wheel scrolling takes over instead. The preference is tracked live |
+| `syncTouch` | off | Phones and tablets keep native touch scrolling and momentum: the most fluid and battery-friendly option, and it avoids iOS quirks |
+| `stopInertiaOnNavigate` | on | Clicking a link mid-glide stops the glide, so new pages always open at the top. Back/forward still restore the previous position |
+| CSS | `lenis/dist/lenis.css`; `scroll-behavior: smooth` removed from `html` | The two conflict; Lenis now owns smooth scrolling |
+| Nested scroll | `data-lenis-prevent` on the mobile menu; `data-lenis-prevent-horizontal` on the Solutions index strip and Insights topic strip | Horizontal strips and the menu scroll natively |
+| Modal | The mobile menu calls `lenis.stop()` while open | Radix locks `<body>`, but Lenis scrolls the window directly, so it must pause too |
+
+**Anchor links.** A capture-phase handler (rather than Lenis' `anchors` option) covers every same-page `#` link, including the skip link, the Solutions index, the Team jump list, prototype-notes links and form error links. It:
+
+- scrolls with an ease-in-out curve whose duration grows with distance (0.6 seconds for short hops, up to 1.5 seconds for the longest jumps);
+- respects `scroll-padding-top`, so targets land just below the sticky header;
+- moves keyboard focus to the target immediately (form fields scroll to their label so the question stays visible);
+- updates the URL hash, so Back works and links can be shared.
+
+Under reduced motion the jump is instant.
+
+### Scroll-linked details
+
+Each is tied to the content it sits in, writes styles directly (no React re-renders), and is skipped under reduced motion:
+
+- **The formula assembles itself.** On Home, the four circles of You + Team + Market + Opportunity start slightly apart and settle into the logo's overlap as the diagram scrolls into view, with "Success" growing slightly into place at the center. It finishes once the diagram is fully visible, so it is never caught half-done. Without JavaScript it simply renders settled.
+- **Hero depth.** The ring line-art in the home hero moves at 14% of scroll speed as the hero leaves, giving a quiet sense of depth. This is the only parallax on the site.
+- **Reading progress.** Articles show a 3px green line under the header that fills as you read the article body. It is decorative (`aria-hidden`) and follows scroll position 1:1.
+- **Index follows you.** On phones and tablets, the Solutions index strip keeps the current section's link in view as you scroll.
+
+### Other motion
 
 - **Hover/focus feedback:** 150ms color and underline transitions on links and buttons.
-- **Section introductions:** a short (≈400ms) fade/rise on section headings using scroll-driven CSS (`animation-timeline: view()`), applied only when supported and only under `prefers-reduced-motion: no-preference`. Content is fully visible without it; nothing waits on JavaScript.
+- **Section introductions:** a short fade/rise on section headings using scroll-driven CSS (`animation-timeline: view()`), applied only when supported and only under `prefers-reduced-motion: no-preference`. With Lenis these now play back as smoothly as the scroll itself. Content is fully visible without them.
 - **Mobile menu:** sheet slides in (Radix + tw-animate-css), disabled under reduced motion.
-- **Not used:** parallax, scroll hijacking, background motion, counters that animate numbers, page transitions.
+- **Not used:** scroll hijacking or snapping, pinned scroll sequences, background motion, animated counters, page transitions, cursor effects.
+
+### Performance budget (measured)
+
+During continuous smooth scrolling on Home, Solutions, Insights and a long article in headless Chrome: steady 60fps (median and 95th-percentile frame 16.7ms), no long tasks, cumulative layout shift 0.
 
 ## Components (shadcn/ui, restyled)
 

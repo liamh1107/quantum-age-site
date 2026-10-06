@@ -72,6 +72,8 @@ The header shows Solutions, Approach, About, Team, References and Insights, with
 
 ## Important desktop interactions
 
+- Smooth, weighted scrolling with a mouse wheel or trackpad on every page (Lenis). Same-page links (the Solutions index, Team jump list, skip link) glide to their section and move keyboard focus there.
+- On Home, the four formula circles come together as the diagram scrolls into view; long articles show a thin reading-progress line under the header.
 - Current page underlined in the header; visible focus rings on every control.
 - Solutions section index that tracks scroll position.
 - Insights search and topic filters update instantly with a result count.
@@ -80,7 +82,8 @@ The header shows Solutions, Approach, About, Team, References and Insights, with
 ## Important mobile improvements
 
 - Full-height menu with large targets and the phone number and email address at the bottom.
-- Solutions index becomes a sticky, horizontally scrolling strip below the header.
+- Solutions index becomes a sticky, horizontally scrolling strip below the header that keeps the current section in view as you scroll.
+- Touch scrolling stays native, so phones and tablets keep the momentum people expect; the smooth anchor links and scroll-linked details still apply.
 - Buttons, menu rows, filters and form fields are 40–44px tall, and every target meets the WCAG 2.2 minimum of 24px; body text 17px; no horizontal scrolling from 320px upward.
 - Phone and email are tap-to-call and tap-to-email throughout.
 

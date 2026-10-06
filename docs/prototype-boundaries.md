@@ -30,7 +30,8 @@ These work completely within the prototype, using local content:
 - Custom 404 page.
 - Page titles, descriptions, Open Graph metadata and a generated share image (logo plus the verified tagline and descriptor).
 - Favicon and Apple touch icon cropped from the official logo SVG (no redrawing).
-- Reduced-motion support: all reveal animations and the menu slide are removed under `prefers-reduced-motion: reduce`.
+- Lenis smooth scrolling on every route, with smooth same-page anchor links that move keyboard focus and update the URL. Also: formula convergence and hero depth on Home, a reading-progress line on articles, and a Solutions index strip that follows the current section on mobile.
+- Reduced-motion support: wheel smoothing, smooth anchor jumps, scroll-linked effects, reveal animations and the menu slide are all removed under `prefers-reduced-motion: reduce`.
 
 ## Simulated (demo-only)
 
