@@ -145,9 +145,17 @@ if ($nodeVersion -lt $minNode) {
   exit 1
 }
 
+# npm writes node_modules\.package-lock.json on install, so a newer package-lock.json
+# (for example after git pull adds a dependency) means node_modules is out of date.
 $nextBin = Join-Path $root 'node_modules\next\dist\bin\next'
-if (-not (Test-Path -LiteralPath $nextBin)) {
-  Write-Host 'Installing dependencies (first run only)...'
+$lockFile = Join-Path $root 'package-lock.json'
+$installedLock = Join-Path $root 'node_modules\.package-lock.json'
+$needsInstall = -not (Test-Path -LiteralPath $nextBin) -or -not (Test-Path -LiteralPath $installedLock)
+if (-not $needsInstall) {
+  $needsInstall = (Get-Item -LiteralPath $lockFile).LastWriteTimeUtc -gt (Get-Item -LiteralPath $installedLock).LastWriteTimeUtc
+}
+if ($needsInstall) {
+  Write-Host 'Installing dependencies (package-lock.json changed or first run)...'
   & npm.cmd ci
   if ($LASTEXITCODE -ne 0) {
     Write-Host 'npm ci failed. Check the messages above, then run start-site.bat again.'

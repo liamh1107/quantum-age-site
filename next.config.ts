@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
+    // Pinned so a stray lockfile in a parent folder (for example the Windows home directory) is ignored.
+    root: import.meta.dirname,
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
