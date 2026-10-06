@@ -19,26 +19,7 @@ export default function ReferencesPage() {
         lead={<p>What clients have said about working with us, and the kinds of organizations we serve.</p>}
       />
 
-      <section className="section-sm" aria-labelledby="groups-heading">
-        <div className="container-page">
-          <h2 id="groups-heading" className="eyebrow font-sans text-muted-foreground">
-            Who we work with
-          </h2>
-          <ul className="mt-6 grid border-t border-stone md:grid-cols-3">
-            {clientGroups.map((g, i) => (
-              <li
-                key={g.name}
-                className={`border-b border-stone py-8 md:border-b-0 md:px-8 md:first:pl-0 ${i > 0 ? "md:border-l" : ""}`}
-              >
-                <h3 className="text-h3">{g.name}</h3>
-                <p className="mt-3 text-muted-foreground">{g.description}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section border-t border-stone bg-plum-50" aria-labelledby="quotes-heading">
+      <section className="section bg-plum-50" aria-labelledby="quotes-heading">
         <div className="container-page">
           <SectionHeading id="quotes-heading" eyebrow="In their words" title="What our clients say" />
           <ul className="mt-12">
@@ -62,6 +43,25 @@ export default function ReferencesPage() {
                     </p>
                   </blockquote>
                 </figure>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section-sm border-b border-stone" aria-labelledby="groups-heading">
+        <div className="container-page">
+          <h2 id="groups-heading" className="eyebrow font-sans text-muted-foreground">
+            Who we work with
+          </h2>
+          <ul className="mt-6 grid border-t border-stone md:grid-cols-3">
+            {clientGroups.map((g, i) => (
+              <li
+                key={g.name}
+                className={`border-b border-stone py-8 md:border-b-0 md:px-8 md:first:pl-0 ${i > 0 ? "md:border-l" : ""}`}
+              >
+                <h3 className="text-h3">{g.name}</h3>
+                <p className="mt-3 text-muted-foreground">{g.description}</p>
               </li>
             ))}
           </ul>

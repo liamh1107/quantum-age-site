@@ -12,7 +12,25 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
-      <PageHero eyebrow={teamIntro.title} title={teamIntro.lead} lead={<p>{about.experience}</p>} />
+      <PageHero
+        eyebrow={teamIntro.title}
+        title={teamIntro.lead}
+        lead={<p>{about.experience}</p>}
+        aside={
+          <nav aria-label="Jump to a team member" className="border-t border-stone pt-5 lg:mt-3">
+            <p className="text-sm font-semibold text-muted-foreground">On this page</p>
+            <ul className="mt-2 grid grid-cols-2 gap-x-6 sm:grid-cols-3 lg:grid-cols-1">
+              {people.map((p) => (
+                <li key={p.slug}>
+                  <a href={`#${p.slug}`} className="flex min-h-10 items-center text-[0.9375rem] text-ink hover:text-plum hover:underline">
+                    {p.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        }
+      />
 
       <section className="section-sm" aria-label="Team members">
         <ul className="container-page grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">

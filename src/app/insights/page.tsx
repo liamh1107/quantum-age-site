@@ -21,11 +21,20 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="Insights that drive growth"
-        lead={
-          <p>
-            Market intelligence, strategic playbooks, and proven tactics for the longevity economy. {range.count}{" "}
-            articles from {range.first} to {range.last}.
-          </p>
+        lead={<p>Market intelligence, strategic playbooks, and proven tactics for the longevity economy.</p>}
+        aside={
+          <dl className="grid grid-cols-3 border-t border-stone pt-5 lg:mt-3 lg:grid-cols-1 lg:gap-5">
+            {[
+              { label: "Articles", value: String(range.count) },
+              { label: "Published", value: `${range.first}–${range.last}` },
+              { label: "Topics", value: String(tags.length) },
+            ].map((f) => (
+              <div key={f.label}>
+                <dt className="text-sm font-semibold text-muted-foreground">{f.label}</dt>
+                <dd className="mt-1 font-serif text-[1.75rem] leading-tight text-ink">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
         }
       />
 
