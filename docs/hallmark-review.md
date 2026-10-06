@@ -14,11 +14,13 @@ These counts come from searching the source in `src/` after the second pass:
 | Backdrop blur / glass effects | 0 | |
 | `rounded-full` | 1 | The circular field behind team portraits, part of the ring motif |
 | Large radii (`rounded-lg` and up) | 0 | Theme radii are 2–8px; buttons and inputs use 2px |
-| Drop shadows | 1 | The mobile navigation sheet, to separate it from the page (the Approach panels use a 1px hairline drawn with `box-shadow`, which reads as a rule, not a shadow) |
+| Drop shadows | 2 | The mobile navigation sheet, to separate it from the page, and a soft shadow under the header once content scrolls beneath it (the Approach panels use a 1px hairline drawn with `box-shadow`, which reads as a rule, not a shadow) |
 | Pill or badge labels | 0 | Topic filters are square-cornered toggle buttons with counts |
 | Distinct icons | 12 | All functional (arrow, phone, mail, map pin, search, menu, alert, info, success, loading, breadcrumb chevron, breadcrumb overflow). No decorative feature icons |
-| Animated elements on the home page | 9 + 2 | Scroll-driven fade/rise on section headings, plus the formula convergence and hero-ring depth added with Lenis; 0 with reduced motion |
+| Animated elements on the home page | Load: 5 + hero rings. Scroll: section headings and 24 grouped items, the formula map, hero-ring depth | All CSS except the formula map and hero depth; 0 with reduced motion |
 | Parallax layers | 1 | Home hero rings at 14% of scroll speed |
+| Pinned sections | 1 | The Home formula map, on screens 1024px and wider only |
+| Looping animation | 1 | Flow along the formula map's four spokes, only once the map is complete and on screen |
 | Carousels, counters, auto-play, scroll hijacking | 0 | |
 
 ## Pass 1: during design and assembly
@@ -27,7 +29,7 @@ Generic patterns identified as the obvious default for this kind of brief, and w
 
 | Generic pattern | Risk for Quantum Age | Decision |
 | --- | --- | --- |
-| "Quantum" visuals: particles, glows, circuit art | Implies a technology company; the firm sells marketing and strategy | Only the logo's four-ring geometry, drawn as thin lines, used in three places (home hero, formula diagram, portrait fields) |
+| "Quantum" visuals: particles, glows, circuit art | Implies a technology company; the firm sells marketing and strategy | Only the logo's four-ring geometry, drawn as thin lines, in two places (home hero, portrait fields); the formula map reuses the logo's plum-and-green palette and its central square, with no glows |
 | Gradient or stock-photo hero | No brand photography exists; stock would be invented context | Typographic hero using the verified tagline and positioning line |
 | Six identical icon cards for solutions | Turns every line into a card; icons would be invented meaning | Numbered editorial list on Home; on Solutions, a sticky index plus full sections with capability lists |
 | Stat bar ("30+ years · 200+ clients") | The source figures conflict | Not shown anywhere; held on `/prototype-notes` |
@@ -63,7 +65,7 @@ Every route was captured at 390, 768 and 1280px (plus 320, 844 landscape and 192
 - **Uppercase eyebrows**: used once per section at most; they act as the section index labels described in the design direction. Not added to cards.
 - **Arrow links**: one arrow per text link (8 uses across the site), always pointing to another page or section, never decorative.
 - **Approach level panels**: the only card-style content panels on the site (the contact form also sits in a bordered surface, as a form). They are kept because the three levels are a sequence that reads better as discrete steps.
-- **Scroll reveal**: short, heading-only, CSS-driven; content is visible without it and it is disabled under reduced motion.
+- **Scroll reveal**: short, heading-only, CSS-driven; content is visible without it and it is disabled under reduced motion. (Later extended to grouped items; see the interaction and storytelling pass below.)
 
 ### Unsupported language removed or held
 
@@ -96,6 +98,30 @@ Problems found while testing and fixed:
 - The reading-progress line stayed invisible because Tailwind's `scale-x-0` uses the separate CSS `scale` property, which multiplied with the inline transform. Fixed by setting the starting state through `transform`.
 - Under reduced motion, Lenis' own mode still eased the wheel over about 80ms. Wheel smoothing is now switched off entirely while the preference is on.
 - Team and prototype-notes targets had a scroll margin stacked on top of the page's scroll padding, leaving a large gap above them. The extra margin was removed.
+
+## Motion review: interaction and storytelling pass
+
+A later brief asked for motion that makes the site feel crafted rather than static, and for the Venn-style formula graphic to be replaced. Each section was reviewed for whether motion would explain something or only decorate it:
+
+| Section | Decision | Reason |
+| --- | --- | --- |
+| Home formula | **Rebuilt** as a convergence map that pins and builds as you scroll, with hover, keyboard and tap exploration | The formula is a sequence that ends in a result; telling it in order, then letting people explore each term's connections, explains it better than any static drawing |
+| Home hero | **Added** a one-time load sequence (copy rises in order, rings draw in) | The first screen sets the tone; the sequence lasts under two seconds and never repeats |
+| Approach levels | **Added** a staggered rise, left to right, with more travel than other reveals | The three levels are a progression; they now arrive as steps instead of all at once |
+| Solutions page | **Added** a continuous progress rail beside the index | Six long sections; the rail shows how far through them you are |
+| Grids (benefits, portraits, testimonials, insights, team, client groups) | **Added** a row stagger to the existing reveal | Rows now settle left to right; nothing extra is introduced |
+| Home solution rows, Home portraits | **Refined** hover states | Clearer affordance on the two lists that link onward |
+| Header | **Added** a shadow once scrolled | Separates the sticky header from content passing beneath it |
+| Articles, legal pages, contact form, References quotes | **Left still** | These are for reading; motion would only slow them down |
+| Translucent frosted header | Rejected after testing | Over the dark formula section it turned muddy |
+| Glow behind the formula core | Rejected | Conflicts with the no-glow rule; a flat halo ring is used instead |
+| Pinned scrollytelling, revisited | **Used once**, with conditions | The earlier review rejected pinning because it hides content. The formula map keeps every term and detail readable in the list at every step, does not intercept scroll, pins only on large screens and is off under reduced motion |
+
+Problems found while testing and fixed:
+
+- The class-merging helper (`cn`) did not know the site's type-scale classes (`text-h2`, `text-lead` and others) and silently dropped them whenever a color class was passed alongside. Every section lead was rendering at body size, and the dark-band headings on Approach at 17px instead of 44px. The helper now registers the type scale.
+- The three Approach levels are bottom-aligned with different heights, so the tallest started revealing first, which ran the steps backwards. They now share one scroll timeline.
+- The formula map's upcoming terms were first dimmed to 28% opacity, below WCAG contrast. They now stay at 55% white (above 4.5:1), and only the small labels inside the map fade in as each term joins.
 
 ## Remaining concerns
 

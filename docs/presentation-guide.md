@@ -52,7 +52,7 @@ The header shows Solutions, Approach, About, Team, References and Insights, with
 
 ## Key design decisions
 
-- **The logo is the concept.** The four overlapping rings echo the company's own formula, You + Team + Market + Opportunity = Success. The rings appear as thin line art in three places only: the home hero, the formula diagram and the circles behind team portraits.
+- **The logo is the concept.** The four overlapping rings echo the company's own formula, You + Team + Market + Opportunity = Success. The rings appear as thin line art in two places only: the home hero and the circles behind team portraits. The formula itself is an interactive map built around the logo's central square.
 - **Editorial, not template.** A serif for headings (Source Serif 4) and a clean sans for reading (Figtree), a 12-column grid, heading-beside-text compositions, and rules instead of boxes.
 - **Brand colors kept, roles swapped.** Plum carries buttons and links because it is legible; green stays as the signature accent on dark plum and in the mark. The logo file is used unchanged.
 - **No stock photography.** The only photographs are the real team headshots and the articles' own images. The hero is typographic.
@@ -73,7 +73,11 @@ The header shows Solutions, Approach, About, Team, References and Insights, with
 ## Important desktop interactions
 
 - Smooth, weighted scrolling with a mouse wheel or trackpad on every page (Lenis). Same-page links (the Solutions index, Team jump list, skip link) glide to their section and move keyboard focus there.
-- On Home, the four formula circles come together as the diagram scrolls into view; long articles show a thin reading-progress line under the header.
+- **The formula map on Home is the moment to slow down.**
+  - On a laptop or larger screen, the section holds in place while you keep scrolling. You, Team, Market and Opportunity join the orbit one at a time, the loop closes, and Success lights up.
+  - Then hover over (or tap) any term to show what it connects to; hover over Success to show everything flowing into it.
+  - On a phone, the same sequence plays as the map scrolls into view.
+- The home hero plays a short opening sequence on load. The Approach levels rise one after another like steps. On Solutions, a green rail beside the index fills as you read. Long articles show a thin reading-progress line under the header.
 - Current page underlined in the header; visible focus rings on every control.
 - Solutions section index that tracks scroll position.
 - Insights search and topic filters update instantly with a result count.

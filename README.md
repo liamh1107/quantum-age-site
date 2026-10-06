@@ -19,7 +19,7 @@ A complete, multi-page redesign prototype of [quantum-age.com](https://quantum-a
 | Components | shadcn/ui on Radix (Sheet, Button, Input, Textarea, Label, Breadcrumb), restyled to the design system |
 | Icons | lucide-react (functional icons only) |
 | Fonts | Source Serif 4 and Figtree via `next/font/google` (self-hosted at build time) |
-| Scrolling and motion | [Lenis](https://lenis.dev) 1.3 smooth scrolling site-wide (wheel and trackpad; native touch on phones and tablets), accessible smooth anchor links, a few scroll-linked details, and CSS reveals. All smoothing and effects switch off under `prefers-reduced-motion`. See `docs/design-direction.md` → Motion |
+| Scrolling and motion | [Lenis](https://lenis.dev) 1.3 smooth scrolling site-wide (wheel and trackpad; native touch on phones and tablets), accessible smooth anchor links, an interactive formula map that builds as you scroll (`src/components/site/formula-story.tsx`), a few other scroll-linked details, and staggered CSS reveals. All smoothing and effects switch off under `prefers-reduced-motion`. See `docs/design-direction.md` → Motion |
 | Content | Local TypeScript and JSON files in `src/content/` (no CMS, no database) |
 
 ## Requirements

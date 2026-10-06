@@ -14,7 +14,8 @@ A generic AI or SaaS landing page, a crypto or quantum-computing site, a consume
 
 The strongest brand asset is the logo itself: four overlapping rings around a plum center. The source site already describes the business with the same structure — **You + Team + Market + Opportunity = Success**. The redesign treats that as the organizing idea:
 
-- The ring geometry (drawn as thin lines, never glowing) appears in exactly three places: the home hero, the collaborative formula diagram, and behind team portraits. Nowhere else.
+- The ring geometry (drawn as thin lines, never glowing) appears in exactly two places: the home hero and behind team portraits. Nowhere else.
+- The formula itself is drawn as a **convergence map**: the four terms on one orbit, each connected to a central "Success" square that echoes the plum square at the heart of the logo. It replaces the earlier overlapping-circle (Venn) diagram, which read as a textbook graphic.
 - Layouts are editorial: a strong typographic hierarchy, a visible grid, hairline rules instead of boxes, and asymmetric two-column compositions where a heading sits in a narrow column beside wider body text.
 - Human elements come from the only real photography available: the team's cut-out portraits, placed on circular plum or green fields that echo the mark.
 
@@ -111,23 +112,43 @@ Under reduced motion the jump is instant.
 
 ### Scroll-linked details
 
-Each is tied to the content it sits in, writes styles directly (no React re-renders), and is skipped under reduced motion:
+Motion is applied where it explains something: how the formula fits together, where you are in a long page, and how the three levels build. Sections that are about reading (articles, legal pages, the contact form) stay still.
 
-- **The formula assembles itself.** On Home, the four circles of You + Team + Market + Opportunity start slightly apart and settle into the logo's overlap as the diagram scrolls into view, with "Success" growing slightly into place at the center. It finishes once the diagram is fully visible, so it is never caught half-done. Without JavaScript it simply renders settled.
-- **Hero depth.** The ring line-art in the home hero moves at 14% of scroll speed as the hero leaves, giving a quiet sense of depth. This is the only parallax on the site.
+Each scroll-linked detail is tied to the content it sits in, writes styles directly (no React re-renders), and is skipped under reduced motion:
+
+- **The formula map (Home).** The section pins on screens 1024px and wider for about one and a half screen-heights of ordinary scrolling. As you scroll, the formula is told in order:
+  - You joins the orbit first, then Team, Market and Opportunity, each drawing its arc of the orbit and its spoke to the center.
+  - The fourth arc closes the loop, "Success" fills with green and a single halo ring pulses out.
+  - Small dashes then flow along the spokes toward the center while the section is on screen, showing that each term feeds the result.
+  - A faint outer dial turns slowly with the scroll to give the map depth.
+
+  The equation list beside the map follows the same steps. Upcoming rows dim but stay readable, so no content is hidden behind the gesture. On tablets and phones the section does not pin; the same sequence plays as the map scrolls into view. Scroll is never intercepted: the page keeps moving at its normal speed, and the pin ends on its own. Implementation: `src/components/site/formula-story.tsx`.
+- **Hero depth.** The ring line-art in the home hero moves at 14% of scroll speed as the hero leaves, turning slightly as it goes. This is the only parallax on the site.
 - **Reading progress.** Articles show a 3px green line under the header that fills as you read the article body. It is decorative (`aria-hidden`) and follows scroll position 1:1.
+- **Solutions progress rail.** On desktop, a green rail beside the Solutions index fills continuously from the first solution to the last, instead of jumping from item to item.
 - **Index follows you.** On phones and tablets, the Solutions index strip keeps the current section's link in view as you scroll.
+
+### Interaction
+
+- **Formula map:** each term is a button. Hovering, tabbing to or tapping one dims everything it is not connected to, thickens its spoke and its two orbit arcs, and highlights its row in the list; "Success" highlights every spoke at once. A tap pins the highlight (tapping again, tapping elsewhere or pressing Escape clears it). The buttons are named by their visible term and detail, and the list beside the map is the full text equivalent.
+- **Home solution rows:** a plum rule draws across the top of the row, the title and copy shift slightly right, the numeral turns green and the arrow advances. The same effect shows on keyboard focus.
+- **Team portraits (Home):** the cut-out scales up gently from its base while the circular field behind it turns pale green.
+- **Header:** gains a soft shadow once the page scrolls beneath it.
+- **Links and buttons:** 150–300ms color, underline and arrow transitions.
 
 ### Other motion
 
-- **Hover/focus feedback:** 150ms color and underline transitions on links and buttons.
-- **Section introductions:** a short fade/rise on section headings using scroll-driven CSS (`animation-timeline: view()`), applied only when supported and only under `prefers-reduced-motion: no-preference`. With Lenis these now play back as smoothly as the scroll itself. Content is fully visible without them.
+- **Home hero load sequence:** played once, on load, not on scroll.
+  - The eyebrow, both headline lines, the lead and the buttons rise into place in order, 90ms apart.
+  - At the same time the hero rings draw themselves in and the plum square settles into the center.
+  - The whole sequence lasts about 1.8 seconds, and the text is readable within the first half-second.
+- **Section introductions:** a short fade/rise using scroll-driven CSS (`animation-timeline: view()`), on section headings and on groups that arrive together: the Home benefits, solution rows, portraits, testimonials and featured insights; the Team grid; the References client groups; the Approach equation band; the three Approach levels. A `--i` index staggers items in the same row, so they arrive left to right rather than all at once. The three Approach levels share one timeline and rise further (56px), so they build up like steps. Content is fully visible without these effects, in browsers without scroll-driven animation (currently Firefox), and under reduced motion.
 - **Mobile menu:** sheet slides in (Radix + tw-animate-css), disabled under reduced motion.
-- **Not used:** scroll hijacking or snapping, pinned scroll sequences, background motion, animated counters, page transitions, cursor effects.
+- **Not used:** scroll hijacking or snapping, background video or particles, glows, animated counters, word-by-word text, page transitions, cursor effects. One pinned section (the formula map) is used, and only on large screens.
 
 ### Performance budget (measured)
 
-During continuous smooth scrolling on Home, Solutions, Insights and a long article in headless Chrome: steady 60fps (median and 95th-percentile frame 16.7ms), no long tasks, cumulative layout shift 0.
+During continuous smooth scrolling on Home (including the pinned formula map), Solutions, Insights and a long article in headless Chrome: steady 60fps (median and 95th-percentile frame 16.7ms), no long tasks, cumulative layout shift 0. The formula map animates only `stroke-dashoffset`, `opacity`, `scale` and `rotate`, skips writes when nothing has changed, and pauses its looping flow while off screen.
 
 ## Components (shadcn/ui, restyled)
 
@@ -150,6 +171,7 @@ Deliberately not used:
 | Hero | Typographic hero with ring line-art; no image | Stock photo hero, gradient blob hero |
 | Services | Numbered index + editorial sections with capability lists | Six identical icon cards |
 | Process | Vertical/horizontal progression of three levels with connecting rule | Timeline with fabricated steps |
+| Formula | Convergence map: four terms on an orbit around a "Success" core, built in order by scrolling, explorable by hover, keyboard or tap, with the equation list as its text equivalent | Venn diagram of overlapping circles (reads as a textbook graphic); static five-box equation alone |
 | Testimonials | Large serif pull quotes, all visible (no carousel) | Auto-rotating carousel (hides content, motion) |
 | CTA | Dark plum band with one action and contact details | Gradient banner with multiple competing buttons |
 | Contact | Two-column: direct details + form, with a prominent prototype notice | Modal form |
