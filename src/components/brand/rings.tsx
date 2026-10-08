@@ -3,42 +3,82 @@ import { cn } from "@/lib/utils";
 /**
  * Line drawing of the four overlapping rings in the Quantum Age mark.
  * Circle spacing comes from the logo SVG: radius 13.79, centers 9.2 apart, scaled so the
- * flower keeps the same outer size. The center is a smooth squircle, inset inside the
- * four circles with a hollow middle. `intro` draws the rings, then this outline, on load.
+ * flower keeps the same outer size. The plum center is drawn from those same circles:
+ * each side is an arc concentric with one ring, and the corners are where the arcs meet.
+ * `intro` draws the rings, then this outline, on load.
  */
 const CENTER = 200;
 const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
 
+/** How far inside each green ring the plum wall sits. The wall stays parallel to that ring. */
+const CORE_INSET = 5;
+/** Radians trimmed off each arc so the corner can turn without a kink. Short, so the side stays an arc. */
+const CORE_BLEND = 0.05;
+
 /**
- * Closed squircle starting at the top and running clockwise, so a dash animation
- * draws it the way the rings draw. Cubics through a superellipse keep the tangent
- * continuous, which four circle arcs do not.
+ * Closed outline starting at the top midpoint and running clockwise.
+ * Side order matches the rings: top from the bottom circle, then right, bottom, left.
  */
-function squirclePath(radius: number, n: number, samples = 48) {
-  const points = Array.from({ length: samples }, (_, i) => {
-    const t = -Math.PI / 2 + (i / samples) * Math.PI * 2;
-    const ct = Math.cos(t);
-    const st = Math.sin(t);
-    const p = 2 / n;
-    return [CENTER + radius * Math.sign(ct) * Math.abs(ct) ** p, CENTER + radius * Math.sign(st) * Math.abs(st) ** p];
+function corePath() {
+  const radius = RADIUS - CORE_INSET;
+  const corner = (-OFFSET + Math.sqrt(2 * radius * radius - OFFSET * OFFSET)) / 2;
+  const circles = [
+    { cx: CENTER, cy: CENTER + OFFSET },
+    { cx: CENTER - OFFSET, cy: CENTER },
+    { cx: CENTER, cy: CENTER - OFFSET },
+    { cx: CENTER + OFFSET, cy: CENTER },
+  ];
+  const corners = [
+    { x: CENTER + corner, y: CENTER - corner },
+    { x: CENTER + corner, y: CENTER + corner },
+    { x: CENTER - corner, y: CENTER + corner },
+    { x: CENTER - corner, y: CENTER - corner },
+  ];
+  const at = (circle: { cx: number; cy: number }, point: { x: number; y: number }) =>
+    Math.atan2(point.y - circle.cy, point.x - circle.cx);
+  const point = (circle: { cx: number; cy: number }, angle: number) => [
+    circle.cx + radius * Math.cos(angle),
+    circle.cy + radius * Math.sin(angle),
+  ];
+  const tangent = (angle: number) => [-Math.sin(angle), Math.cos(angle)];
+  const spans = circles.map((circle, i) => {
+    let start = at(circle, corners[(i + 3) % 4]);
+    let end = at(circle, corners[i]);
+    while (end <= start) end += Math.PI * 2;
+    return { circle, start, end };
   });
-  const f = (v: number) => v.toFixed(2);
-  let d = `M${f(points[0][0])} ${f(points[0][1])}`;
-  for (let i = 0; i < samples; i++) {
-    const p0 = points[(i - 1 + samples) % samples];
-    const p1 = points[i];
-    const p2 = points[(i + 1) % samples];
-    const p3 = points[(i + 2) % samples];
-    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
-    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
-    d += `C${f(c1[0])} ${f(c1[1])} ${f(c2[0])} ${f(c2[1])} ${f(p2[0])} ${f(p2[1])}`;
+  const trimmed = spans.map((span) => ({
+    ...span,
+    start: span.start + CORE_BLEND,
+    end: span.end - CORE_BLEND,
+  }));
+  const fmt = (value: number) => value.toFixed(2);
+  const top = (spans[0].start + spans[0].end) / 2;
+  const start = point(spans[0].circle, top);
+  let d = `M${fmt(start[0])} ${fmt(start[1])}`;
+  for (let i = 0; i < 4; i++) {
+    const span = trimmed[i];
+    const end = point(span.circle, span.end);
+    d += `A${fmt(radius)} ${fmt(radius)} 0 0 1 ${fmt(end[0])} ${fmt(end[1])}`;
+    const next = trimmed[(i + 1) % 4];
+    const join = point(next.circle, next.start);
+    const out = tangent(span.end);
+    const into = tangent(next.start);
+    const dx = join[0] - end[0];
+    const dy = join[1] - end[1];
+    const det = out[0] * into[1] - out[1] * into[0];
+    const alongOut = (dx * into[1] - dy * into[0]) / det;
+    const alongInto = (out[0] * dy - out[1] * dx) / det;
+    const handle = Math.min(alongOut, alongInto) * 0.55;
+    d += `C${fmt(end[0] + out[0] * handle)} ${fmt(end[1] + out[1] * handle)} ${fmt(join[0] - into[0] * handle)} ${fmt(join[1] - into[1] * handle)} ${fmt(join[0])} ${fmt(join[1])}`;
   }
-  return `${d}Z`;
+  d += `A${fmt(radius)} ${fmt(radius)} 0 0 1 ${fmt(start[0])} ${fmt(start[1])}Z`;
+  return d;
 }
 
-const CORE_PATH = squirclePath(23, 2.8);
+const CORE_PATH = corePath();
 
 export function Rings({
   className,
