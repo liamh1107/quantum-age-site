@@ -345,7 +345,8 @@
     animation-delay: calc(var(--d, 0) * 90ms + 60ms);
   }
   .rings-intro circle {
-    stroke-dasharray: 1 1;
+    /* A dash of exactly the circle length leaves a gap where the stroke starts. The extra length overlaps that join, and the matching gap keeps the circle hidden before it draws. */
+    stroke-dasharray: 1.02 1.02;
     transform-box: fill-box;
     transform-origin: center;
     rotate: calc(var(--i, 0) * 90deg - 90deg);
@@ -373,7 +374,7 @@
 }
 @keyframes ring-draw {
   from {
-    stroke-dashoffset: 1;
+    stroke-dashoffset: 1.02;
   }
   to {
     stroke-dashoffset: 0;

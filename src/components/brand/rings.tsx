@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 /**
  * Line drawing of the four overlapping rings in the Quantum Age mark.
  * Circle spacing comes from the logo SVG: radius 13.79, centers 9.2 apart, scaled so the
- * flower keeps the same outer size. The plum center is the region inside all four circles
- * (four arcs), which is the cushion in the mark, not a rounded rectangle placed on top.
+ * flower keeps the same outer size. The center is the same cushion drawn as an open
+ * outline, inset inside the four circles so the middle stays hollow.
  * `intro` draws the rings in on load (see `.rings-intro` in globals.css).
  */
 const CENTER = 200;
@@ -12,12 +12,13 @@ const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
 
-/** Corners of the four-circle intersection, then the arc of the opposite circle between them. */
-function intersectionPath() {
-  const corner = (-OFFSET + Math.sqrt(2 * RADIUS * RADIUS - OFFSET * OFFSET)) / 2;
+/** The cushion inside the four circles. `scale` insets it so a stroked copy sits clear of the rings. */
+function intersectionPath(scale = 1) {
+  const corner = ((-OFFSET + Math.sqrt(2 * RADIUS * RADIUS - OFFSET * OFFSET)) / 2) * scale;
+  const radius = (RADIUS * scale).toFixed(2);
   const at = (sx: number, sy: number) =>
     `${(CENTER + sx * corner).toFixed(2)} ${(CENTER + sy * corner).toFixed(2)}`;
-  const arc = (point: string) => `A${RADIUS} ${RADIUS} 0 0 1 ${point}`;
+  const arc = (point: string) => `A${radius} ${radius} 0 0 1 ${point}`;
   const tr = at(1, -1);
   const br = at(1, 1);
   const bl = at(-1, 1);
@@ -52,7 +53,14 @@ export function Rings({
       {centers.map(([cx, cy], i) => (
         <circle key={`o${i}`} cx={cx} cy={cy} r={OUTER_RADIUS} pathLength={1} style={order(i)} fill="none" stroke={stroke} strokeWidth={1} />
       ))}
-      <path className="ring-core" d={intersectionPath()} fill="var(--plum)" />
+      <path
+        className="ring-core"
+        d={intersectionPath(0.74)}
+        fill="none"
+        stroke="var(--plum)"
+        strokeWidth={2}
+        strokeLinejoin="round"
+      />
       {centers.map(([cx, cy], i) => (
         <circle
           key={`g${i}`}
