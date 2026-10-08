@@ -3,82 +3,15 @@ import { cn } from "@/lib/utils";
 /**
  * Line drawing of the four overlapping rings in the Quantum Age mark.
  * Circle spacing comes from the logo SVG: radius 13.79, centers 9.2 apart, scaled so the
- * flower keeps the same outer size. The plum center is drawn from those same circles:
- * each side is an arc concentric with one ring, and the corners are where the arcs meet.
- * `intro` draws the rings, then this outline, on load.
+ * flower keeps the same outer size. The center is the real logo mark, scaled to sit inside
+ * the intersection. `intro` draws the rings in on load, then fades the mark in.
  */
 const CENTER = 200;
 const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
-
-/** How far inside each green ring the plum wall sits. Close, so the two curves read as one construction. */
-const CORE_INSET = 3;
-/** Radians trimmed off each arc so the corner can turn without a kink. Short, so the side stays an arc. */
-const CORE_BLEND = 0.04;
-
-/**
- * Closed outline starting at the top midpoint and running clockwise.
- * Side order matches the rings: top from the bottom circle, then right, bottom, left.
- */
-function corePath() {
-  const radius = RADIUS - CORE_INSET;
-  const corner = (-OFFSET + Math.sqrt(2 * radius * radius - OFFSET * OFFSET)) / 2;
-  const circles = [
-    { cx: CENTER, cy: CENTER + OFFSET },
-    { cx: CENTER - OFFSET, cy: CENTER },
-    { cx: CENTER, cy: CENTER - OFFSET },
-    { cx: CENTER + OFFSET, cy: CENTER },
-  ];
-  const corners = [
-    { x: CENTER + corner, y: CENTER - corner },
-    { x: CENTER + corner, y: CENTER + corner },
-    { x: CENTER - corner, y: CENTER + corner },
-    { x: CENTER - corner, y: CENTER - corner },
-  ];
-  const at = (circle: { cx: number; cy: number }, point: { x: number; y: number }) =>
-    Math.atan2(point.y - circle.cy, point.x - circle.cx);
-  const point = (circle: { cx: number; cy: number }, angle: number) => [
-    circle.cx + radius * Math.cos(angle),
-    circle.cy + radius * Math.sin(angle),
-  ];
-  const tangent = (angle: number) => [-Math.sin(angle), Math.cos(angle)];
-  const spans = circles.map((circle, i) => {
-    let start = at(circle, corners[(i + 3) % 4]);
-    let end = at(circle, corners[i]);
-    while (end <= start) end += Math.PI * 2;
-    return { circle, start, end };
-  });
-  const trimmed = spans.map((span) => ({
-    ...span,
-    start: span.start + CORE_BLEND,
-    end: span.end - CORE_BLEND,
-  }));
-  const fmt = (value: number) => value.toFixed(2);
-  const top = (spans[0].start + spans[0].end) / 2;
-  const start = point(spans[0].circle, top);
-  let d = `M${fmt(start[0])} ${fmt(start[1])}`;
-  for (let i = 0; i < 4; i++) {
-    const span = trimmed[i];
-    const end = point(span.circle, span.end);
-    d += `A${fmt(radius)} ${fmt(radius)} 0 0 1 ${fmt(end[0])} ${fmt(end[1])}`;
-    const next = trimmed[(i + 1) % 4];
-    const join = point(next.circle, next.start);
-    const out = tangent(span.end);
-    const into = tangent(next.start);
-    const dx = join[0] - end[0];
-    const dy = join[1] - end[1];
-    const det = out[0] * into[1] - out[1] * into[0];
-    const alongOut = (dx * into[1] - dy * into[0]) / det;
-    const alongInto = (out[0] * dy - out[1] * dx) / det;
-    const handle = Math.min(alongOut, alongInto) * 0.55;
-    d += `C${fmt(end[0] + out[0] * handle)} ${fmt(end[1] + out[1] * handle)} ${fmt(join[0] - into[0] * handle)} ${fmt(join[1] - into[1] * handle)} ${fmt(join[0])} ${fmt(join[1])}`;
-  }
-  d += `A${fmt(radius)} ${fmt(radius)} 0 0 1 ${fmt(start[0])} ${fmt(start[1])}Z`;
-  return d;
-}
-
-const CORE_PATH = corePath();
+/** Square footprint of the mark in the 400 viewBox. Small enough to clear the green rings. */
+const MARK_SIZE = 46;
 
 export function Rings({
   className,
@@ -107,14 +40,14 @@ export function Rings({
       {centers.map(([cx, cy], i) => (
         <circle key={`o${i}`} cx={cx} cy={cy} r={OUTER_RADIUS} pathLength={1} style={order(i)} fill="none" stroke={stroke} strokeWidth={1} />
       ))}
-      <path
-        className="ring-core"
-        d={CORE_PATH}
-        pathLength={1}
-        fill="none"
-        stroke="var(--plum)"
-        strokeWidth={2}
-        strokeLinejoin="round"
+      <image
+        href="/brand/quantum-age-mark.svg"
+        x={CENTER - MARK_SIZE / 2}
+        y={CENTER - MARK_SIZE / 2}
+        width={MARK_SIZE}
+        height={MARK_SIZE}
+        className="ring-mark"
+        pointerEvents="none"
       />
       {centers.map(([cx, cy], i) => (
         <circle
