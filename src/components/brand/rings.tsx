@@ -3,15 +3,15 @@ import { cn } from "@/lib/utils";
 /**
  * Line drawing of the four overlapping rings in the Quantum Age mark.
  * Circle spacing comes from the logo SVG: radius 13.79, centers 9.2 apart, scaled so the
- * flower keeps the same outer size. The center is the real logo mark, scaled to sit inside
- * the intersection. `intro` draws the rings in on load, then fades the mark in.
+ * flower keeps the same outer size. The real logo mark sits in front of the rings, large
+ * enough to cover the inner crossings. `intro` draws the rings in on load, then fades the mark in.
  */
 const CENTER = 200;
 const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
-/** Square footprint of the mark in the 400 viewBox. Small enough to clear the green rings. */
-const MARK_SIZE = 46;
+/** Square footprint of the mark in the 400 viewBox. Four times the previous inset, so it overlaps the rings. */
+const MARK_SIZE = 184;
 
 export function Rings({
   className,
@@ -40,15 +40,6 @@ export function Rings({
       {centers.map(([cx, cy], i) => (
         <circle key={`o${i}`} cx={cx} cy={cy} r={OUTER_RADIUS} pathLength={1} style={order(i)} fill="none" stroke={stroke} strokeWidth={1} />
       ))}
-      <image
-        href="/brand/quantum-age-mark.svg"
-        x={CENTER - MARK_SIZE / 2}
-        y={CENTER - MARK_SIZE / 2}
-        width={MARK_SIZE}
-        height={MARK_SIZE}
-        className="ring-mark"
-        pointerEvents="none"
-      />
       {centers.map(([cx, cy], i) => (
         <circle
           key={`g${i}`}
@@ -63,6 +54,15 @@ export function Rings({
           strokeWidth={2}
         />
       ))}
+      <image
+        href="/brand/quantum-age-mark.svg"
+        x={CENTER - MARK_SIZE / 2}
+        y={CENTER - MARK_SIZE / 2}
+        width={MARK_SIZE}
+        height={MARK_SIZE}
+        className="ring-mark"
+        pointerEvents="none"
+      />
     </svg>
   );
 }
