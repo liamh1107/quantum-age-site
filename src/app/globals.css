@@ -338,34 +338,68 @@
   }
 }
 
-/* Home hero: a single load sequence. Copy rises in order, the rings draw themselves in, then the mark fades into the center. */
+/* Home hero. Copy rises, then the mark is constructed from its circles. */
+.ring-guides {
+  /* Resting opacity. With an 80% ink stroke this is about 8% on the page. */
+  opacity: 0.1;
+}
+.ring-wash {
+  opacity: 0;
+}
 @media (prefers-reduced-motion: no-preference) {
   .intro {
     animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-delay: calc(var(--d, 0) * 90ms + 60ms);
   }
-  .rings-intro circle {
+  .rings-intro .ring-guide {
     /* A dash of exactly the circle length leaves a gap where the stroke starts. The extra length overlaps that join, and the matching gap keeps the circle hidden before it draws. */
     stroke-dasharray: 1.02 1.02;
     transform-box: fill-box;
     transform-origin: center;
     rotate: calc(var(--i, 0) * 90deg - 90deg);
-    animation: ring-draw 1.5s cubic-bezier(0.65, 0, 0.35, 1) both;
-    animation-delay: calc(var(--i, 0) * 110ms + 120ms);
+    animation: ring-draw 1.45s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-delay: calc(var(--i, 0) * 110ms + 80ms);
   }
-  .rings-intro .ring-green {
-    animation-delay: calc(var(--i, 0) * 110ms + 380ms);
+  .rings-intro .ring-intersect {
+    stroke-dasharray: 1.02 1.02;
+    animation: ring-draw 1.15s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms + 1.05s);
   }
-  .rings-intro .ring-mark {
-    animation: ring-mark-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+  .rings-intro .ring-guides {
+    animation: ring-recede 1s ease 3.55s both;
+  }
+  .rings-intro .ring-wash {
+    animation: ring-fade 0.7s ease 1.2s both;
+  }
+  .rings-intro .ring-fill,
+  .rings-intro .ring-cut {
+    animation: ring-fade 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .rings-intro .ring-leaf,
+  .rings-intro .ring-cut {
+    animation-delay: 2.15s;
+  }
+  .rings-intro .ring-gray {
+    animation-delay: 2.55s;
+  }
+  .rings-intro .ring-core {
+    animation-delay: 2.95s;
   }
 }
-@keyframes ring-mark-in {
+@keyframes ring-fade {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes ring-recede {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
   }
 }
 @keyframes intro-rise {
