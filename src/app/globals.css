@@ -355,7 +355,7 @@
   .rings-intro .ring-green {
     animation-delay: calc(var(--i, 0) * 110ms + 380ms);
   }
-  .rings-intro rect {
+  .rings-intro .ring-core {
     transform-box: fill-box;
     transform-origin: center;
     animation: ring-core 0.8s cubic-bezier(0.34, 1.4, 0.5, 1) 1.05s both;
