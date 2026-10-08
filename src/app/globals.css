@@ -338,7 +338,7 @@
   }
 }
 
-/* Home hero: a single load sequence. Copy rises in order while the rings draw and the core settles. */
+/* Home hero: a single load sequence. Copy rises in order, then the rings and the center draw themselves in. */
 @media (prefers-reduced-motion: no-preference) {
   .intro {
     animation: intro-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -357,9 +357,8 @@
     animation-delay: calc(var(--i, 0) * 110ms + 380ms);
   }
   .rings-intro .ring-core {
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: ring-core 0.8s cubic-bezier(0.34, 1.4, 0.5, 1) 1.05s both;
+    stroke-dasharray: 1.02 1.02;
+    animation: ring-draw 1.5s cubic-bezier(0.65, 0, 0.35, 1) 0.9s both;
   }
 }
 @keyframes intro-rise {
@@ -380,17 +379,6 @@
     stroke-dashoffset: 0;
   }
 }
-@keyframes ring-core {
-  from {
-    opacity: 0;
-    scale: 0.2;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
 /* Header: lifts off the page once content scrolls beneath it (`data-scrolled` is set by <ScrollState>). */
 .site-header {
   transition: box-shadow 0.3s ease;

@@ -3,28 +3,42 @@ import { cn } from "@/lib/utils";
 /**
  * Line drawing of the four overlapping rings in the Quantum Age mark.
  * Circle spacing comes from the logo SVG: radius 13.79, centers 9.2 apart, scaled so the
- * flower keeps the same outer size. The center is the same cushion drawn as an open
- * outline, inset inside the four circles so the middle stays hollow.
- * `intro` draws the rings in on load (see `.rings-intro` in globals.css).
+ * flower keeps the same outer size. The center is a smooth squircle, inset inside the
+ * four circles with a hollow middle. `intro` draws the rings, then this outline, on load.
  */
 const CENTER = 200;
 const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
 
-/** The cushion inside the four circles. `scale` insets it so a stroked copy sits clear of the rings. */
-function intersectionPath(scale = 1) {
-  const corner = ((-OFFSET + Math.sqrt(2 * RADIUS * RADIUS - OFFSET * OFFSET)) / 2) * scale;
-  const radius = (RADIUS * scale).toFixed(2);
-  const at = (sx: number, sy: number) =>
-    `${(CENTER + sx * corner).toFixed(2)} ${(CENTER + sy * corner).toFixed(2)}`;
-  const arc = (point: string) => `A${radius} ${radius} 0 0 1 ${point}`;
-  const tr = at(1, -1);
-  const br = at(1, 1);
-  const bl = at(-1, 1);
-  const tl = at(-1, -1);
-  return `M${tr}${arc(br)}${arc(bl)}${arc(tl)}${arc(tr)}Z`;
+/**
+ * Closed squircle starting at the top and running clockwise, so a dash animation
+ * draws it the way the rings draw. Cubics through a superellipse keep the tangent
+ * continuous, which four circle arcs do not.
+ */
+function squirclePath(radius: number, n: number, samples = 48) {
+  const points = Array.from({ length: samples }, (_, i) => {
+    const t = -Math.PI / 2 + (i / samples) * Math.PI * 2;
+    const ct = Math.cos(t);
+    const st = Math.sin(t);
+    const p = 2 / n;
+    return [CENTER + radius * Math.sign(ct) * Math.abs(ct) ** p, CENTER + radius * Math.sign(st) * Math.abs(st) ** p];
+  });
+  const f = (v: number) => v.toFixed(2);
+  let d = `M${f(points[0][0])} ${f(points[0][1])}`;
+  for (let i = 0; i < samples; i++) {
+    const p0 = points[(i - 1 + samples) % samples];
+    const p1 = points[i];
+    const p2 = points[(i + 1) % samples];
+    const p3 = points[(i + 2) % samples];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += `C${f(c1[0])} ${f(c1[1])} ${f(c2[0])} ${f(c2[1])} ${f(p2[0])} ${f(p2[1])}`;
+  }
+  return `${d}Z`;
 }
+
+const CORE_PATH = squirclePath(23, 2.8);
 
 export function Rings({
   className,
@@ -55,7 +69,8 @@ export function Rings({
       ))}
       <path
         className="ring-core"
-        d={intersectionPath(0.74)}
+        d={CORE_PATH}
+        pathLength={1}
         fill="none"
         stroke="var(--plum)"
         strokeWidth={2}
