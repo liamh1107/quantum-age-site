@@ -12,10 +12,10 @@ const RADIUS = 94.77;
 const OFFSET = 63.23;
 const OUTER_RADIUS = 126.77;
 
-/** How far inside each green ring the plum wall sits. The wall stays parallel to that ring. */
-const CORE_INSET = 5;
+/** How far inside each green ring the plum wall sits. Close, so the two curves read as one construction. */
+const CORE_INSET = 3;
 /** Radians trimmed off each arc so the corner can turn without a kink. Short, so the side stays an arc. */
-const CORE_BLEND = 0.05;
+const CORE_BLEND = 0.04;
 
 /**
  * Closed outline starting at the top midpoint and running clockwise.
