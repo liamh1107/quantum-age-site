@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const CENTER = 200;
 const RADIUS = 94.77;
 const OFFSET = 63.23;
-/** White ring weight in the logo file, scaled with the circles. */
+/** Divider weight in the logo file, scaled with the circles. */
 const CUT = (1.9034 / 13.79) * RADIUS;
 
 const circles = [
@@ -136,7 +136,7 @@ export function Rings({
       <path className="ring-fill ring-gray" d={GRAY} fill="var(--brand-gray)" />
       <path className="ring-fill ring-leaf" d={GREEN} fill="var(--green)" />
       <path className="ring-fill ring-core" d={PURPLE} fill="var(--plum)" />
-      <g className="ring-cut" fill="none" stroke="#fff" strokeWidth={CUT}>
+      <g className="ring-cut" fill="none" stroke="var(--background)" strokeWidth={CUT}>
         {circles.map((circle, i) => (
           <circle key={`cut${i}`} cx={circle.x} cy={circle.y} r={RADIUS} />
         ))}
